@@ -11,12 +11,19 @@
     <div class="fixed inset-0 overflow-hidden bg-black">
 
     <!-- STAR FIELD -->
-    <div class="stars"></div>
     
     <div class="relative w-screen h-screen">
-      <!-- SCREEN -->
-      <div id="screen" class="crt-screen"></div>
+      <div class="crt-screen">
+        <!-- SCREEN -->
+        <div class="crt-display">
+          <div class="stars"></div>
+          <div id="screenContent" class="crt-content"></div>
+          <div class="crt-scanlines"></div>
+          <div class="crt-noise"></div>
+          <div class="crt-flicker"></div>
 
+        </div>
+      </div>
       <!-- TV FRAME -->
       <img
         src="/src/assets/tvDesktop.png"
@@ -27,6 +34,7 @@
           h-full
           object-fill
           z-10
+          pointer-events-none
         "
       />
 

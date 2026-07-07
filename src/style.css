@@ -1,6 +1,13 @@
 @import "tailwindcss";
 
 
+@font-face {
+  font-family: "DOS";
+  src: url("/src/assets/fonts/dosLikeFont.ttf");
+}
+
+
+
 html,
 body,
 #app {
@@ -19,6 +26,8 @@ body,
 
 
 .stars {
+
+z-index:0;
 
 position:absolute;
 
@@ -269,22 +278,45 @@ opacity:1;
 
 
 .crt-content {
+   width:100%;
 
+   height:100%;
+   display:flex;
 
-opacity:0;
+   align-items:center;
+   justify-content:center;
+   padding:0 5vw;
+   box-sizing:border-box;
 
+   font-family: "DOS", monospace;
+   letter-spacing: 2px;
 
-animation:
+   position: relative;
+   z-index:20;
 
-contentFade 1s ease forwards;
+   pointer-events:auto;
 
-
-animation-delay:1s;
-
-
+   opacity:0;
+   animation: contentFade 1s ease forwards;
+   animation-delay:1s;
 }
 
 
+@media (max-width:600px) {
+
+    .terminal {
+
+        width:65vw;
+
+        font-size:1rem;
+
+        line-height:1.5;
+
+        letter-spacing:1px;
+
+    }
+
+}
 
 @keyframes contentFade {
 
@@ -372,10 +404,6 @@ position:absolute;
 
 inset:-50%;
 
-
-z-index:20;
-
-
 pointer-events:none;
 
 
@@ -440,10 +468,6 @@ transform:translate(0,0);
 position:absolute;
 
 inset:0;
-
-
-z-index:30;
-
 
 pointer-events:none;
 
@@ -553,5 +577,128 @@ transform:none;
 
 }
 
+
+}
+
+.crt-scanlines,
+.crt-noise,
+.crt-flicker {
+   z-index: 10;
+}
+
+.terminal {
+
+    font-family:"DOS", monospace;
+
+    width: min(700px, 75vw);
+
+    min-height: unset;
+
+    color:white;
+
+    font-size:2rem;
+    line-height:1.45;
+    letter-spacing:clamp(1px, 0.4vw, 3px);
+
+    text-align:left;
+      overflow-wrap:break-word;
+
+}
+
+
+/* =====================
+   AMBER CRT PALETTE
+===================== */
+
+
+.system {
+
+    color:#c98b3c;
+
+    text-shadow:
+    0 0 8px #c98b3c;
+
+}
+
+
+.label {
+
+    color:#9b6a2f;
+
+    text-shadow:
+    0 0 8px #9b6a2f;
+
+}
+
+
+.value {
+
+    color:#e6c38a;
+
+}
+
+
+.mission {
+
+    color:#d8b77a;
+
+}
+
+
+
+/* COMMAND PROMPT */
+
+.enter-system {
+
+   margin-top:35px;
+   margin-left:auto;
+   margin-right:auto;
+
+   color:#ffb347;
+
+   background:transparent;
+   border:none;
+
+   font-family:"DOS", monospace;
+   font-size:2rem;
+
+   cursor:pointer;
+
+   pointer-events:auto;
+
+   text-shadow:
+   0 0 10px #ffb347;
+
+   display:block;
+   padding:10px;
+
+}
+
+
+/* only cursor flashes */
+
+.cursor {
+
+    animation:
+    cursorBlink 1s steps(1) infinite;
+
+}
+
+
+@keyframes cursorBlink {
+
+    50% {
+
+        opacity: 0.5;
+
+    }
+
+}
+
+
+
+.hidden {
+
+    display:none;
 
 }
