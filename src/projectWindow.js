@@ -4,7 +4,9 @@ projectWindow.innerHTML = `
   <div class="project-window-panel">
     <div class="project-window-header">
       <div class="project-window-title"></div>
-      <button type="button" class="ascii project-window-close" aria-label="Close window">X</button>
+      <button type="button" class="project-window-close" aria-label="Close window">
+        <img src="src/assets/icons/window-close.svg" alt="" />
+      </button>
     </div>
     <div class="project-window-meta">
       <div class="project-window-label">Techstack</div>
@@ -22,13 +24,10 @@ projectWindow.innerHTML = `
 `;
 
 const appendProjectWindow = () => {
-  const display = document.querySelector(".crt-display");
-  if (display) {
-    display.appendChild(projectWindow);
-  } else {
-    window.addEventListener("DOMContentLoaded", () => {
-      document.querySelector(".crt-display")?.appendChild(projectWindow);
-    });
+  const container = document.querySelector(".project-window-container");
+
+  if (container) {
+    container.appendChild(projectWindow);
   }
 };
 

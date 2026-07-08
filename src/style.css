@@ -699,7 +699,7 @@ transform:none;
 .crt-scanlines,
 .crt-noise,
 .crt-flicker {
-    z-index: 10;
+    z-index: 20;
     pointer-events:none;
 }
 
@@ -919,7 +919,7 @@ transform:none;
     justify-content:center;
     padding:2rem;
     background:rgba(0,0,0,0.55);
-    z-index:30;
+    z-index:15;
     pointer-events:auto;
 }
 
