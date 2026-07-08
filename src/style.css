@@ -145,8 +145,10 @@ filter:blur(8px);
 
 .ticker-track{
     display:flex;
-    gap:1.5rem;
-    animation:ticker 24s linear infinite;
+    width:max-content;
+    gap:0;
+    animation:ticker 15s linear infinite;
+    will-change:transform;
 }
 
 .ticker-group{
@@ -165,11 +167,11 @@ filter:blur(8px);
 
 @keyframes ticker{
 from{
-    transform:translateX(0);
+    transform:translate3d(0,0,0);
 }
 
 to{
-    transform:translateX(-50%);
+    transform:translate3d(calc(-1 * var(--ticker-distance, 50%)),0,0);
 }
 }
 
