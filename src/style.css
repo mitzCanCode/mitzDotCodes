@@ -1276,3 +1276,297 @@ transform:none;
     letter-spacing:.1rem;
 
 }
+
+
+@media (max-width: 768px) {
+
+    .desktop {
+
+        padding-top: 1rem;
+
+        gap: .5rem;
+
+        width: 80%;
+
+        max-width: 95vw;
+
+        padding: 8px;
+    }
+
+
+    .desktop-category {
+
+
+        gap: .25rem;
+
+        margin: .5rem 0;
+
+        padding-top: .5rem;
+
+    }
+
+
+    .desktop-category {
+        margin-bottom: 10px;
+    }
+
+    .desktop-category-label {
+        margin-bottom: 4px;
+        font-size: 0.75rem;
+    }
+
+    .desktop-tile {
+        gap: 4px;
+        margin-bottom: 5px;
+        padding: .25rem;
+
+    }
+
+    .tile-icon {
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
+
+
+    .tile-name {
+        font-size: 9px;
+        letter-spacing: .05rem;
+    }
+
+
+    .tile-name {
+        font-size: 10px;
+        line-height: 1.1;
+    }
+
+}
+
+
+/* =====================
+   MOBILE PROJECT WINDOWS
+===================== */
+
+@media (max-width:768px) {
+
+    .project-window {
+
+        position:absolute;
+
+        inset:0;
+
+        padding:3vw;
+
+        box-sizing:border-box;
+
+        overflow:hidden;
+
+    }
+
+
+
+
+    .project-window-panel {
+
+        width:70%;
+
+        max-width:none;
+
+        height: 70%;
+
+        max-height:none;
+
+        box-sizing:border-box;
+
+    }
+
+
+    .project-window.visible .project-window-panel {
+        transform:scale(1);
+    }
+
+
+    /* HEADER */
+
+    .project-window-header {
+
+        padding:.35rem .5rem;
+
+        gap:.5rem;
+
+        min-height:2.5rem;
+
+    }
+
+
+    .project-window-title {
+
+        font-size:.8rem;
+
+        letter-spacing:.15rem;
+
+        overflow:hidden;
+
+        text-overflow:ellipsis;
+
+        white-space:nowrap;
+
+    }
+
+
+    .project-window-close {
+
+        width:2rem;
+
+        height:2rem;
+
+        flex-shrink:0;
+
+    }
+
+
+    .project-window-close-icon {
+
+        width:30px;
+
+        height:30px;
+
+    }
+
+
+
+    /* TECHSTACK AREA */
+
+    .project-window-meta {
+
+        padding:.4rem .5rem;
+
+        gap:.35rem;
+
+    }
+
+
+    .project-window-label {
+
+        font-size:.65rem;
+
+        letter-spacing:.15rem;
+
+    }
+
+
+    .project-techstack {
+
+        gap:.3rem;
+
+    }
+
+
+    .tech-item {
+
+        padding:.25rem .4rem;
+
+        font-size:.65rem;
+
+    }
+
+
+
+    /* CONTENT */
+
+    .project-window-content {
+
+        padding:.5rem;
+
+        font-size:.75rem;
+
+        line-height:1.45;
+
+        max-height:55vh;
+
+    }
+
+
+    .project-window-content h1 {
+
+        font-size:1.05rem;
+
+    }
+
+
+    .project-window-content h2 {
+
+        font-size:.95rem;
+
+    }
+
+
+    .project-window-content h3 {
+
+        font-size:.85rem;
+
+    }
+
+
+    .project-window-content code {
+
+        padding:.5rem;
+
+        font-size:.65rem;
+
+        overflow-x:auto;
+
+    }
+
+
+    /* FOOTER */
+
+    .project-window-footer {
+
+        padding:.4rem .5rem;
+
+    }
+
+
+    .toggle-inline {
+
+        font-size:.75rem;
+
+        gap:.35rem;
+
+    }
+
+
+    .toggle-switch {
+
+        width:40px;
+
+        height:20px;
+
+    }
+
+
+    .toggle-knob {
+
+        width:14px;
+
+        height:14px;
+
+    }
+
+
+    .toggle-inline input:checked 
+    + .toggle-switch .toggle-knob {
+
+        transform:translateX(18px);
+
+    }
+
+
+    /* SCROLLBAR */
+
+    .project-window-content::-webkit-scrollbar {
+        width:8px;
+    }
+
+
+}
