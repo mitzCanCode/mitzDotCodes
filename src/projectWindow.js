@@ -1,3 +1,5 @@
+import closeIconUrl from "./assets/icons/window-close.svg";
+
 const projectWindow = document.createElement("div");
 projectWindow.className = "project-window hidden";
 projectWindow.innerHTML = `
@@ -5,7 +7,7 @@ projectWindow.innerHTML = `
     <div class="project-window-header">
       <div class="project-window-title"></div>
       <button type="button" class="project-window-close" aria-label="Close window">
-        <img src="src/assets/icons/window-close.svg" alt="" />
+        <img class="project-window-close-icon" alt="" />
       </button>
     </div>
     <div class="project-window-meta">
@@ -35,6 +37,10 @@ appendProjectWindow();
 
 const titleEl = projectWindow.querySelector(".project-window-title");
 const closeButton = projectWindow.querySelector(".project-window-close");
+// set icon src using import.meta.url so Vite resolves it correctly in build
+const closeIconEl = projectWindow.querySelector(".project-window-close-icon");
+closeIconEl.src = closeIconUrl;
+
 const contentEl = projectWindow.querySelector(".project-window-content");
 const techstackEl = projectWindow.querySelector(".project-techstack");
 const toggleInput = projectWindow.querySelector(".project-nerd-toggle");
