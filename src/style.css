@@ -53,10 +53,12 @@ background-position:
 100px 200px,
 300px 100px;
 
+background-repeat: repeat;
 
 animation:
 starsMove 120s linear infinite;
 
+will-change: background-position;
 
 opacity:.7;
 
@@ -68,14 +70,22 @@ opacity:.7;
 
 from {
 
-transform:translateY(0);
+background-position:
+
+20px 40px,
+100px 200px,
+300px 100px;
 
 }
 
 
 to {
 
-transform:translateY(2000px);
+background-position:
+
+20px 2040px,
+100px 2200px,
+300px 2100px;
 
 }
 
