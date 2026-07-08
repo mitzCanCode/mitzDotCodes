@@ -1,116 +1,90 @@
-import './style.css'
+import "./style.css";
 
-const screen = document.querySelector('#screenContent');
-
-const lines = [
-  { text: "SYSTEM ONLINE...", type: "system" },
-  { text: "", type: "" },
-
-  { text: "IDENTITY:", type: "label" },
-  { text: "MITZ", type: "value" },
-
-  { text: "", type: "" },
-
-  { text: "ROLE:", type: "label" },
-  { text: "SOFTWARE ENGINEER", type: "value" },
-
-  { text: "", type: "" },
-
-  { text: "MISSION:", type: "label" },
-  { text: "Building scalable web experiences", type: "mission" },
-  { text: "and digital products that feel alive.", type: "mission" },
-
-  { text: "", type: "" },
-];
-
-
-let index = 0;
-
+const screen = document.querySelector("#screenContent");
 
 screen.innerHTML = `
 <div class="terminal">
 
-  <div id="typedText"></div>
+    <p class="boot">INITIALIZING...</p>
 
-  <button id="enterSystem" class="enter-system hidden">
-    <span class="cursor">[ENTER SYSTEM]</span>
-  </button>
+    <div class="logo-container">
+
+        <pre class="ascii hidden">
+███╗   ███╗██╗████████╗███████╗
+████╗ ████║██║╚══██╔══╝╚══███╔╝
+██╔████╔██║██║   ██║     ███╔╝
+██║╚██╔╝██║██║   ██║    ███╔╝
+██║ ╚═╝ ██║██║   ██║   ███████╗
+╚═╝     ╚═╝╚═╝   ╚═╝   ╚══════╝
+        </pre>
+
+
+        <div class="ticker hidden">
+            <div class="ticker-track">
+
+                <div class="ticker-group">
+                    <span>SOFTWARE ENGINEER</span>
+                    <span>*</span>
+                    <span>FULL STACK DEVELOPMENT</span>
+                    <span>*</span>
+                    <span>IOS APPLICATIONS</span>
+                    <span>*</span>
+                    <span>WEB APPLICATIONS</span>
+                    <span>*</span>
+                    <span>SERVERS</span>
+                </div>
+
+
+                <div class="ticker-group">
+                    <span>SOFTWARE ENGINEER</span>
+                    <span>*</span>
+                    <span>FULL STACK DEVELOPMENT</span>
+                    <span>*</span>
+                    <span>IOS APPLICATIONS</span>
+                    <span>*</span>
+                    <span>WEB APPLICATIONS</span>
+                    <span>*</span>
+                    <span>SERVERS</span>
+                </div>
+
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <button class="enter-system hidden">
+        [ ENTER SYSTEM ]
+    </button>
+
 
 </div>
 `;
 
+const boot = document.querySelector(".boot");
+const ascii = document.querySelector(".ascii");
+const ticker = document.querySelector(".ticker");
+const button = document.querySelector(".enter-system");
 
-
-const typedText = document.querySelector("#typedText");
-const enterSystem = document.querySelector("#enterSystem");
-
-enterSystem.addEventListener("click", () => {
-  console.log("ENTER SYSTEM");
-});
-
-
-
-function typeLine() {
-
-  if(index >= lines.length){
+setTimeout(() => {
+    boot.classList.add("fade-out");
 
     setTimeout(() => {
-      enterSystem.classList.remove("hidden");
-    },500);
+        boot.remove();
 
-    return;
-  }
+        ascii.classList.remove("hidden");
+        ticker.classList.remove("hidden");
 
+        ascii.classList.add("fade-in");
+        ticker.classList.add("fade-in");
 
-  const current = lines[index];
+        setTimeout(() => {
+            button.classList.remove("hidden");
+            button.classList.add("fade-in");
+        }, 500);
 
+    }, 500);
 
-  const line = document.createElement("div");
-
-  line.className = current.type;
-  if (current.type === "system") {
-    line.classList.add("text-center");
-  }
-
-  typedText.appendChild(line);
-
-
-  // empty line
-  if(current.text === "") {
-
-    index++;
-
-    setTimeout(typeLine,180);
-
-    return;
-
-  }
-
-
-  let char = 0;
-
-
-  const interval = setInterval(()=>{
-
-    line.textContent += current.text[char];
-
-    char++;
-
-
-    if(char >= current.text.length){
-
-      clearInterval(interval);
-
-      index++;
-
-      setTimeout(typeLine,180);
-
-    }
-
-
-  },45);
-
-}
-
-
-setTimeout(typeLine,1500);
+}, 1200);

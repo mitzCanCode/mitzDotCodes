@@ -83,12 +83,108 @@ transform:translateY(2000px);
 }
 
 
+.ascii{
+
+    font-family:"DOS",monospace;
+
+    font-size:clamp(.45rem,1vw,.9rem);
+
+    line-height:1.15;
+
+    color:#ffb347;
+
+    text-shadow:0 0 10px #ffb347;
+
+    margin:0;
+
+}
+
+.fade-in{
+
+    animation:fadeIn .8s forwards;
+
+}
+
+.fade-out{
+
+    animation:fadeOut .5s forwards;
+
+}
+
+@keyframes fadeIn{
+
+from{opacity:0;filter:blur(10px);}
+
+to{opacity:1;filter:blur(0);}
+
+}
+
+@keyframes fadeOut{
+
+to{
+
+opacity:0;
+
+filter:blur(8px);
+
+}
+
+}
+
+
+
+.ticker{
+    width:100%;
+    overflow:hidden;
+    margin-top:2rem;
+    margin-bottom:2.5rem;
+    padding:.85rem 0;
+    border-top:1px solid rgba(255,179,71,.15);
+    border-bottom:1px solid rgba(255,179,71,.15);
+}
+
+.ticker-track{
+    display:flex;
+    gap:1.5rem;
+    animation:ticker 24s linear infinite;
+}
+
+.ticker-group{
+    display:flex;
+    gap:1rem;
+    flex-wrap:nowrap;
+}
+
+.ticker-track span{
+    flex:none;
+    color:#b9854c;
+    font-size:clamp(.75rem, 1.6vw, .95rem);
+    letter-spacing:.25rem;
+    white-space:nowrap;
+}
+
+@keyframes ticker{
+from{
+    transform:translateX(0);
+}
+
+to{
+    transform:translateX(-50%);
+}
+}
+
 /* =====================
    CRT BOOT
 ===================== */
 
 
+.boot{
 
+    font-size:1.25rem;
+
+    letter-spacing:.35rem;
+
+}
 
 
 @keyframes crtBoot {
@@ -587,25 +683,54 @@ transform:none;
 }
 
 .terminal {
-
     font-family:"DOS", monospace;
-
-    width: min(700px, 75vw);
-
+    width:min(90vw, 900px);
+    margin:0 auto;
     min-height: unset;
-
-    color:white;
-
+    color:#e6c38a;
     font-size:2rem;
     line-height:1.45;
     letter-spacing:clamp(1px, 0.4vw, 3px);
-
     text-align:left;
-      overflow-wrap:break-word;
-
+    overflow-wrap:break-word;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:clamp(1rem, 1.4vw, 1.5rem);
 }
 
+.logo-container {
+    width:min(30vw, 95vw);
+    max-width:42rem;
+    min-width:18rem;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:clamp(.3rem, .8vw, .75rem);
+    margin:0 auto;
+    text-align:center;
+}
 
+.ascii {
+    display:inline-block;
+    width:auto;
+    max-width:100%;
+    margin:0;
+    padding:0;
+    font-family:"DOS", monospace;
+    font-size:clamp(.85rem, 1.8vw, 1.35rem);
+    line-height:1.05;
+    letter-spacing:calc(0.05rem + 0.015vw);
+    white-space:pre;
+    overflow-wrap:normal;
+    text-align:left;
+}
+
+.ticker {
+    width:100%;
+    margin:0;
+    padding:.9rem 0;
+}
 /* =====================
    AMBER CRT PALETTE
 ===================== */
@@ -648,31 +773,35 @@ transform:none;
 
 /* COMMAND PROMPT */
 
-.enter-system {
+.enter-system{
 
-   margin-top:35px;
-   margin-left:auto;
-   margin-right:auto;
+    background:none;
+    border:none;
 
-   color:#ffb347;
+    color:#ffb347;
 
-   background:transparent;
-   border:none;
+    font-family:"DOS";
 
-   font-family:"DOS", monospace;
-   font-size:2rem;
+    font-size:1.3rem;
 
-   cursor:pointer;
+    letter-spacing:.25rem;
 
-   pointer-events:auto;
+    cursor:pointer;
 
-   text-shadow:
-   0 0 10px #ffb347;
-
-   display:block;
-   padding:10px;
+    transition:.3s;
 
 }
+
+.enter-system:hover{
+
+    text-shadow:0 0 15px #ffb347;
+
+    transform:scale(1.03);
+
+}
+
+
+
 
 
 /* only cursor flashes */
