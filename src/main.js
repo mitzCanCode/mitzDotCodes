@@ -68,7 +68,6 @@ screen.innerHTML = `
 const boot = document.querySelector(".boot");
 const ascii = document.querySelector(".ascii");
 const ticker = document.querySelector(".ticker");
-const tickerTrack = document.querySelector(".ticker-track");
 const button = document.querySelector(".enter-system");
 
 setTimeout(() => {
@@ -79,12 +78,6 @@ setTimeout(() => {
 
         ascii.classList.remove("hidden");
         ticker.classList.remove("hidden");
-
-        const tickerGroup = tickerTrack.querySelector(".ticker-group");
-        if (tickerGroup) {
-            const distance = tickerGroup.getBoundingClientRect().width;
-            tickerTrack.style.setProperty("--ticker-distance", `${distance}px`);
-        }
 
         ascii.classList.add("fade-in");
         ticker.classList.add("fade-in");
