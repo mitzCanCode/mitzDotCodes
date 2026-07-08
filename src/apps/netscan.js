@@ -1,5 +1,7 @@
 import { openProjectWindow } from "../projectWindow.js";
 import retroComputerIcon from "../assets/icons/retro-pc-solid.svg";
+import pythonIcon from "../assets/icons/snake.svg";
+
 
 export default {
 
@@ -14,15 +16,20 @@ export default {
     technicalDocFile:"netscan.technical.md",
 
     techStack:[
-        { icon:"🐍", name:"Python" },
-        { icon:"🌐", name:"sockets" },
-        { icon:"⚡", name:"async IO" }
+        { icon: pythonIcon, name:"Python" }
     ],
 
     action(){
 
         openProjectWindow(this);
 
-    }
+    },
+    links: [
+        {
+            text: "[GitHub]",
+            url: "https://github.com/mitzCanCode/netscan"
+        }
+]
 
 };
+

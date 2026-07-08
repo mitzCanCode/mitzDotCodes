@@ -1,5 +1,7 @@
 import { openProjectWindow } from "../projectWindow.js";
 import gamepadIcon from "../assets/icons/gaming.svg";
+import retroComputerIcon from "../assets/icons/retro-pc-solid.svg";
+import themeIcon from "../assets/icons/themes.svg";
 
 export default {
 
@@ -14,9 +16,8 @@ export default {
     technicalDocFile:"tetris.technical.md",
 
     techStack:[
-        { icon:"💻", name:"C" },
-        { icon:"🎮", name:"ANSI" },
-        { icon:"⚙️", name:"Game Logic" }
+        { icon:retroComputerIcon, name:"C" },
+        { icon:themeIcon, name:"ANSI" }
     ],
 
     action(){

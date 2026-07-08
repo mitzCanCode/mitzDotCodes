@@ -1,23 +1,24 @@
 import closeIconUrl from "./assets/icons/window-close.svg";
 
 const projectWindow = document.createElement("div");
-projectWindow.className = "project-window hidden";
+projectWindow.className = "window hidden";
 projectWindow.innerHTML = `
-  <div class="project-window-panel">
-    <div class="project-window-header">
-      <div class="project-window-title"></div>
-      <button type="button" class="project-window-close" aria-label="Close window">
-        <img class="project-window-close-icon" alt="" />
+  <div class="window-panel">
+    <div class="window-header">
+      <div class="window-title"></div>
+      <button type="button" class="window-close" aria-label="Close window">
+        <img class="window-close-icon" alt="" />
       </button>
     </div>
-    <div class="project-window-meta">
-      <div class="project-window-label">Techstack</div>
-      <div class="project-techstack"></div>
+    <div class="window-meta">
+      <div class="window-label">Techstack</div>
+      <div class="techstack"></div>
     </div>
-    <div class="project-window-content"></div>
-    <div class="project-window-footer">
+    <div class="window-content"></div>
+    <div class="window-footer">
+      <div class="window-links"></div>
       <label class="toggle-inline">
-        <input type="checkbox" class="project-nerd-toggle" />
+        <input type="checkbox" class="nerd-toggle" />
         <span class="toggle-switch"><span class="toggle-knob"></span></span>
         <span>For nerds</span>
       </label>
@@ -26,7 +27,7 @@ projectWindow.innerHTML = `
 `;
 
 const appendProjectWindow = () => {
-  const container = document.querySelector(".project-window-container");
+  const container = document.querySelector(".window-container");
 
   if (container) {
     container.appendChild(projectWindow);
@@ -35,15 +36,15 @@ const appendProjectWindow = () => {
 
 appendProjectWindow();
 
-const titleEl = projectWindow.querySelector(".project-window-title");
-const closeButton = projectWindow.querySelector(".project-window-close");
+const titleEl = projectWindow.querySelector(".window-title");
+const closeButton = projectWindow.querySelector(".window-close");
 // set icon src using import.meta.url so Vite resolves it correctly in build
-const closeIconEl = projectWindow.querySelector(".project-window-close-icon");
+const closeIconEl = projectWindow.querySelector(".window-close-icon");
 closeIconEl.src = closeIconUrl;
 
-const contentEl = projectWindow.querySelector(".project-window-content");
-const techstackEl = projectWindow.querySelector(".project-techstack");
-const toggleInput = projectWindow.querySelector(".project-nerd-toggle");
+const contentEl = projectWindow.querySelector(".window-content");
+const techstackEl = projectWindow.querySelector(".techstack");
+const toggleInput = projectWindow.querySelector(".nerd-toggle");
 const screenContent = document.querySelector("#screenContent");
 
 let currentProject = null;
@@ -63,7 +64,7 @@ async function loadMarkdown(fileName) {
   }
 
   try {
-    const response = await fetch(new URL(`./assets/${fileName}`, import.meta.url));
+    const response = await fetch(new URL(`./assets/markdown/${fileName}`, import.meta.url));
     if (!response.ok) {
       return `## Unable to load ${fileName}`;
     }
@@ -149,8 +150,23 @@ function renderProjectContent() {
 
 function renderTechstack(stack = []) {
   techstackEl.innerHTML = stack.length
-    ? stack.map((item) => `<div class="tech-item">${item.icon} ${item.name}</div>`).join("")
+    ? stack.map((item) => `
+        <div class="tech-item">
+          <img class="tech-icon" src="${item.icon}" alt="${item.name}">
+          <span>${item.name}</span>
+        </div>
+      `).join("")
     : "<div class='tech-item'>No techstack defined</div>";
+}
+
+const linksEl = projectWindow.querySelector(".window-links");
+
+function renderLinks(links = []) {
+  linksEl.innerHTML = links.map((link) => `
+    <a href="${link.url}" target="_blank" rel="noopener noreferrer">
+      ${link.text}
+    </a>
+  `).join("");
 }
 
 export async function openProjectWindow(project) {
@@ -158,9 +174,10 @@ export async function openProjectWindow(project) {
   titleEl.textContent = project?.name || "";
   toggleInput.checked = false;
   renderTechstack(project?.techStack || []);
+  renderLinks(project?.links || []);
   contentEl.innerHTML = "<p>Loading document...</p>";
 
-  if (screenContent) screenContent.classList.add("project-blur");
+  if (screenContent) screenContent.classList.add("blur");
 
   projectWindow.classList.remove("hidden");
   requestAnimationFrame(() => projectWindow.classList.add("visible"));
@@ -172,7 +189,7 @@ export async function openProjectWindow(project) {
 
 export function closeProjectWindow() {
   projectWindow.classList.remove("visible");
-  if (screenContent) screenContent.classList.remove("project-blur");
+  if (screenContent) screenContent.classList.remove("blur");
   setTimeout(() => projectWindow.classList.add("hidden"), 250);
 }
 

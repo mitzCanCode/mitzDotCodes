@@ -1,21 +1,15 @@
 import person from "../assets/icons/person.svg";
 
-
 export default {
 
-    name:"about.md",
+    name:"README.md",
 
     icon:person,
 
     category:"GENERAL",
 
-    action(){
+    window:"info",
 
-        console.log("opening about");
-
-        // later:
-        // openWindow("about", htmlContent)
-
-    }
+    docFile:"about.md"
 
 };

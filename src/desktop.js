@@ -1,4 +1,5 @@
 import { openProjectWindow } from "./projectWindow.js";
+import { openInfoWindow } from "./infoWindow.js";
 
 export function createDesktop(apps, container) {
     container.innerHTML = "";
@@ -32,23 +33,22 @@ export function createDesktop(apps, container) {
                 <div class="tile-name">${app.name}</div>
             `;
 
-                tile.onclick = () => {
-                    try {
-                        console.log('desktop tile clicked for', app && app.name, 'has docFile?', !!app.docFile);
-                        if (app.docFile) {
-                            // prefer global wrapper to avoid module import timing issues
-                            if (window && typeof window.openProjectWindowGlobal === 'function') {
-                                window.openProjectWindowGlobal(app);
-                            } else {
-                                openProjectWindow(app);
-                            }
-                        } else if (typeof app.action === 'function') {
-                            app.action();
-                        }
-                    } catch (err) {
-                        console.error('desktop tile click failed', err);
+            tile.onclick = () => {
+                try {
+                    if (app.window === "info") {
+                        openInfoWindow(app);
+                    } 
+                    else if (app.docFile) {
+                        openProjectWindow(app);
                     }
-                };
+                    else if (typeof app.action === "function") {
+                        app.action();
+                    }
+
+                } catch (err) {
+                    console.error(err);
+                }
+            };
 
             section.appendChild(tile);
         });
