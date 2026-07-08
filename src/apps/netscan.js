@@ -1,10 +1,11 @@
 import { openProjectWindow } from "../projectWindow.js";
+import retroComputerIcon from "../assets/icons/retro-pc-solid.svg";
 
 export default {
 
     name:"NetScan",
 
-    icon:"🧪",
+    icon:retroComputerIcon,
 
     category:"PROJECTS",
 

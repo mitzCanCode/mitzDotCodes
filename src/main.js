@@ -2,6 +2,8 @@ import "./style.css";
 import { createDesktop } from "./desktop.js";
 import About from "./apps/about.js";
 import Contact from "./apps/contact.js";
+import Github from "./apps/github.js";
+
 import Skills from "./apps/skills.js";
 import SoloLift from "./apps/sololift.js";
 import NetScan from "./apps/netscan.js";
@@ -68,7 +70,7 @@ const button = screen.querySelector(".enter-system");
 const terminal = screen.querySelector(".terminal");
 const desktop = screen.querySelector("#desktop");
 
-const apps = [About, Contact, Skills, SoloLift, NetScan, OhShint, Tetris];
+const apps = [About, Contact, Skills, Github, SoloLift, NetScan, OhShint, Tetris];
 const dotStates = [".", "..", "..."];
 let dotIndex = 0;
 let dotCycleCount = 0;

@@ -1,8 +1,10 @@
+import codeIcon from "../assets/icons/code.svg";
+
 export default {
 
     name:"skills.exe",
 
-    icon:"⚙",
+    icon:codeIcon,
 
     category:"GENERAL",
 

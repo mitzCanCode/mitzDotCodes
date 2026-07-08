@@ -1,8 +1,11 @@
+import person from "../assets/icons/person.svg";
+
+
 export default {
 
     name:"about.md",
 
-    icon:"📄",
+    icon:person,
 
     category:"GENERAL",
 

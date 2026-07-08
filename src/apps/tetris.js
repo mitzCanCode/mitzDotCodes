@@ -1,10 +1,11 @@
 import { openProjectWindow } from "../projectWindow.js";
+import gamepadIcon from "../assets/icons/gaming.svg";
 
 export default {
 
     name:"Tetris",
 
-    icon:"🎮",
+    icon:gamepadIcon,
 
     category:"PROJECTS",
 

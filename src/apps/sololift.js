@@ -1,10 +1,11 @@
 import { openProjectWindow } from "../projectWindow.js";
+import appleIcon from "../assets/icons/apple.svg";
 
 export default {
 
     name:"SoloLift",
 
-    icon:"📱",
+    icon:appleIcon,
 
     category:"PROJECTS",
 
@@ -19,9 +20,7 @@ export default {
     ],
 
     action(){
-
         openProjectWindow(this);
-
     }
 
 };

@@ -1,8 +1,10 @@
+import envelopeIcon from "../assets/icons/envelope.svg";
+
 export default {
 
     name:"contact.exe",
 
-    icon:"✉",
+    icon:envelopeIcon,
 
     category:"GENERAL",
 

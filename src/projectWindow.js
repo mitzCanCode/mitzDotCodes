@@ -6,19 +6,17 @@ projectWindow.innerHTML = `
       <div class="project-window-title"></div>
       <button type="button" class="ascii project-window-close" aria-label="Close window">X</button>
     </div>
-    <div class="project-window-body">
-      <div class="project-window-meta">
-        <div class="project-window-label">Techstack</div>
-        <div class="project-techstack"></div>
-      </div>
-      <div class="project-window-toggle">
-        <label class="toggle-inline">
-          <input type="checkbox" class="project-nerd-toggle" />
-          <span class="toggle-switch"><span class="toggle-knob"></span></span>
-          <span>For nerds</span>
-        </label>
-      </div>
-      <div class="project-window-content"></div>
+    <div class="project-window-meta">
+      <div class="project-window-label">Techstack</div>
+      <div class="project-techstack"></div>
+    </div>
+    <div class="project-window-content"></div>
+    <div class="project-window-footer">
+      <label class="toggle-inline">
+        <input type="checkbox" class="project-nerd-toggle" />
+        <span class="toggle-switch"><span class="toggle-knob"></span></span>
+        <span>For nerds</span>
+      </label>
     </div>
   </div>
 `;

@@ -26,7 +26,9 @@ export function createDesktop(apps, container) {
             tile.type = "button";
             tile.className = "desktop-tile";
             tile.innerHTML = `
-                <div class="tile-icon">${app.icon ?? "■"}</div>
+                <div class="tile-icon">
+                    ${app.icon ? `<img src="${app.icon}" alt="${app.name}">` : "■"}
+                </div>
                 <div class="tile-name">${app.name}</div>
             `;
 

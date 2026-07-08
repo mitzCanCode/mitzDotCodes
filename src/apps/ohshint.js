@@ -1,10 +1,11 @@
 import { openProjectWindow } from "../projectWindow.js";
+import searchIcon from "../assets/icons/search.svg";
 
 export default {
 
     name:"OhShint",
 
-    icon:"🛡",
+    icon:searchIcon,
 
     category:"PROJECTS",
 
