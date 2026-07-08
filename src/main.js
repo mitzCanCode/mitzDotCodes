@@ -5,7 +5,7 @@ const screen = document.querySelector("#screenContent");
 screen.innerHTML = `
 <div class="terminal">
 
-    <p class="boot">INITIALIZING...</p>
+    <p class="boot">INITIALIZING<span class="boot-dots"></span></p>
 
     <div class="logo-container">
 
@@ -66,11 +66,18 @@ screen.innerHTML = `
 `;
 
 const boot = document.querySelector(".boot");
+const bootDots = document.querySelector(".boot-dots");
 const ascii = document.querySelector(".ascii");
 const ticker = document.querySelector(".ticker");
 const button = document.querySelector(".enter-system");
 
-setTimeout(() => {
+const dotStates = [".", "..", "..."];
+let dotIndex = 0;
+let dotCycleCount = 0;
+const totalCycles = 3;
+const totalDotSteps = dotStates.length * totalCycles; // 3 full cycles
+
+const finishBoot = () => {
     boot.classList.add("fade-out");
 
     setTimeout(() => {
@@ -78,15 +85,21 @@ setTimeout(() => {
 
         ascii.classList.remove("hidden");
         ticker.classList.remove("hidden");
+        button.classList.remove("hidden");
 
         ascii.classList.add("fade-in");
         ticker.classList.add("fade-in");
-
-        setTimeout(() => {
-            button.classList.remove("hidden");
-            button.classList.add("fade-in");
-        }, 500);
-
+        button.classList.add("fade-in");
     }, 500);
+};
 
-}, 1200);
+const bootDotInterval = setInterval(() => {
+    bootDots.textContent = dotStates[dotIndex];
+    dotIndex = (dotIndex + 1) % dotStates.length;
+    dotCycleCount += 1;
+
+    if (dotCycleCount >= totalDotSteps) {
+        clearInterval(bootDotInterval);
+        setTimeout(finishBoot, 360);
+    }
+}, 360);
