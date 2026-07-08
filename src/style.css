@@ -292,17 +292,10 @@ brightness(1);
 
 
 .crt-screen {
-
-position:absolute;
-
-inset:0;
-
-overflow:hidden;
-
-z-index:1;
-
-pointer-events:none;
-
+    position:absolute;
+    inset:0;
+    overflow:hidden;
+    z-index:1;
 }
 
 
@@ -706,7 +699,8 @@ transform:none;
 .crt-scanlines,
 .crt-noise,
 .crt-flicker {
-   z-index: 10;
+    z-index: 10;
+    pointer-events:none;
 }
 
 .terminal {
@@ -856,5 +850,116 @@ transform:none;
 .hidden {
 
     display:none;
+
+}
+
+.desktop.hidden {
+
+    display:none;
+    pointer-events:none;
+
+}
+
+.desktop {
+
+    position:absolute;
+
+    inset:0;
+
+    padding:3rem 2rem;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:2rem;
+
+    align-items:center;
+
+    justify-content:center;
+
+    width:100%;
+
+    max-width:60vw;
+
+    margin:0 auto;
+
+    z-index:1;
+
+}
+
+.desktop-category {
+    width:100%;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap:1rem;
+    margin:1.5rem 0;
+    padding:1rem 0 0;
+}
+
+.desktop-category:first-child {
+    margin-top:0;
+}
+
+.desktop-category-label {
+    grid-column: 1 / -1;
+    color:#b9854c;
+    font-size:clamp(.75rem, 1vw, .95rem);
+    letter-spacing:.25rem;
+    text-transform:uppercase;
+    padding:0 0 .75rem .25rem;
+    border-bottom:1px solid rgba(255,179,71,.08);
+}
+
+.desktop-tile {
+
+    background:none;
+
+    border:none;
+
+    color:#ffb347;
+
+    font-family:"DOS";
+
+    cursor:pointer;
+
+    padding:.75rem 1rem;
+
+    text-align:center;
+
+    transition:.2s;
+
+}
+
+
+.desktop-tile:hover {
+
+    background:rgba(255,179,71,.03);
+
+    box-shadow:none;
+
+    transform:translateY(-1px);
+
+}
+
+.desktop.fade-in {
+    animation:fadeIn .8s forwards;
+}
+
+
+.tile-icon {
+
+    font-size:2rem;
+
+    margin-bottom:.25rem;
+
+}
+
+
+.tile-name {
+
+    font-size:.9rem;
+
+    letter-spacing:.1rem;
 
 }
