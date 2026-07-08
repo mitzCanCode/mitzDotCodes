@@ -14,6 +14,7 @@ projectWindow.innerHTML = `
       <div class="project-window-toggle">
         <label class="toggle-inline">
           <input type="checkbox" class="project-nerd-toggle" />
+          <span class="toggle-switch"><span class="toggle-knob"></span></span>
           <span>For nerds</span>
         </label>
       </div>
@@ -23,10 +24,13 @@ projectWindow.innerHTML = `
 `;
 
 const appendProjectWindow = () => {
-  if (document.body) {
-    document.body.appendChild(projectWindow);
+  const display = document.querySelector(".crt-display");
+  if (display) {
+    display.appendChild(projectWindow);
   } else {
-    window.addEventListener("DOMContentLoaded", () => document.body.appendChild(projectWindow));
+    window.addEventListener("DOMContentLoaded", () => {
+      document.querySelector(".crt-display")?.appendChild(projectWindow);
+    });
   }
 };
 
@@ -37,6 +41,7 @@ const closeButton = projectWindow.querySelector(".project-window-close");
 const contentEl = projectWindow.querySelector(".project-window-content");
 const techstackEl = projectWindow.querySelector(".project-techstack");
 const toggleInput = projectWindow.querySelector(".project-nerd-toggle");
+const screenContent = document.querySelector("#screenContent");
 
 let currentProject = null;
 let currentDoc = "";
@@ -44,9 +49,7 @@ let currentTechDoc = "";
 
 closeButton.addEventListener("click", closeProjectWindow);
 projectWindow.addEventListener("click", (event) => {
-  if (event.target === projectWindow) {
-    closeProjectWindow();
-  }
+  if (event.target === projectWindow) closeProjectWindow();
 });
 
 toggleInput.addEventListener("change", renderProjectContent);
@@ -149,17 +152,28 @@ function renderTechstack(stack = []) {
 
 export async function openProjectWindow(project) {
   currentProject = project;
-  titleEl.textContent = project.name;
+  titleEl.textContent = project?.name || "";
   toggleInput.checked = false;
-  renderTechstack(project.techStack || []);
+  renderTechstack(project?.techStack || []);
   contentEl.innerHTML = "<p>Loading document...</p>";
-  projectWindow.classList.remove("hidden");
 
-  currentDoc = await loadMarkdown(project.docFile);
-  currentTechDoc = await loadMarkdown(project.technicalDocFile);
+  if (screenContent) screenContent.classList.add("project-blur");
+
+  projectWindow.classList.remove("hidden");
+  requestAnimationFrame(() => projectWindow.classList.add("visible"));
+
+  currentDoc = await loadMarkdown(project?.docFile);
+  currentTechDoc = await loadMarkdown(project?.technicalDocFile);
   renderProjectContent();
 }
 
 export function closeProjectWindow() {
-  projectWindow.classList.add("hidden");
+  projectWindow.classList.remove("visible");
+  if (screenContent) screenContent.classList.remove("project-blur");
+  setTimeout(() => projectWindow.classList.add("hidden"), 250);
+}
+
+// expose helper on window to be usable from non-module click handlers
+if (typeof window !== 'undefined') {
+  window.openProjectWindowGlobal = openProjectWindow;
 }
