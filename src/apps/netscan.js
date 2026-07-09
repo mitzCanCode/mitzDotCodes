@@ -5,7 +5,7 @@ import pythonIcon from "../assets/icons/snake.svg";
 
 export default {
 
-    name:"NetScan",
+    name:"netscan.py",
 
     icon:retroComputerIcon,
 

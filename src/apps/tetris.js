@@ -5,7 +5,7 @@ import themeIcon from "../assets/icons/themes.svg";
 
 export default {
 
-    name:"Tetris",
+    name:"tetris.c",
 
     icon:gamepadIcon,
 

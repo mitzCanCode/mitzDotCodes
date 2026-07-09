@@ -4,7 +4,7 @@ import pythonIcon from "../assets/icons/snake.svg";
 
 export default {
 
-    name:"OhShint",
+    name:"ohshint.py",
 
     icon:searchIcon,
 

@@ -6,7 +6,7 @@ import dollarIcon from "../assets/icons/dollar.svg";
 
 export default {
 
-    name:"SoloLift",
+    name:"sololift",
 
     icon:appleIcon,
 
