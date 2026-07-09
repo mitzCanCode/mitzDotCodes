@@ -2,6 +2,7 @@ import { openProjectWindow } from "./projectWindow.js";
 import { openInfoWindow } from "./infoWindow.js";
 import { openConnectWindow } from "./connectWindow.js";
 import { openSkillsWindow } from "./skillsWindow.js";
+import { openCreditsWindow } from "./creditsWindow.js";
 
 export function createDesktop(apps, container) {
     container.innerHTML = "";
@@ -44,6 +45,9 @@ export function createDesktop(apps, container) {
                     }
                     else if (app.window === "skills") {
                         openSkillsWindow();
+                    }
+                    else if (app.window === "credits") {
+                        openCreditsWindow(app);
                     }
                     else if (app.docFile) {
                         openProjectWindow(app);
