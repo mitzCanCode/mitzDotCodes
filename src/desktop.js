@@ -1,5 +1,6 @@
 import { openProjectWindow } from "./projectWindow.js";
 import { openInfoWindow } from "./infoWindow.js";
+import {openConnectWindow} from "./connectWindow.js";
 
 export function createDesktop(apps, container) {
     container.innerHTML = "";
@@ -37,7 +38,9 @@ export function createDesktop(apps, container) {
                 try {
                     if (app.window === "info") {
                         openInfoWindow(app);
-                    } 
+                    } else if (app.window === "connect") {
+                        openConnectWindow();
+                    }
                     else if (app.docFile) {
                         openProjectWindow(app);
                     }

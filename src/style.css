@@ -418,7 +418,7 @@ opacity:1;
 }
 
 
-@media (max-width:600px) {
+@media (max-width:768px) {
 
     .terminal {
 
@@ -1602,5 +1602,220 @@ transform:none;
     height: 20px;
 
     object-fit: contain;
+
+}
+
+
+
+.connect-status {
+    display:flex;
+    align-items:center;
+    gap:.5rem;
+    color:#e6c38a;
+}
+
+
+.status-light {
+
+    width:10px;
+    height:10px;
+
+    background:#ffb347;
+
+    box-shadow:
+    0 0 10px #ffb347;
+
+}
+
+
+
+
+.connect-list {
+
+    display:flex;
+    flex-direction:column;
+    gap:.75rem;
+
+}
+
+
+
+.connect-item {
+
+    display:flex;
+
+    align-items:center;
+
+    gap:1rem;
+
+    padding:.75rem;
+
+    background:
+    rgba(255,179,71,.04);
+
+    border:1px solid rgba(255,179,71,.15);
+
+}
+
+
+
+.connect-icon {
+
+    width:48px;
+    height:48px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border:2px solid;
+
+    border-color:
+    #ffb347
+    #5a5a5a
+    #5a5a5a
+    #ffb347;
+
+
+    flex-shrink:0;
+
+}
+
+
+.connect-icon img {
+
+    width:28px;
+
+    height:28px;
+
+    object-fit:contain;
+
+    filter:
+    drop-shadow(0 0 6px #ffb347);
+
+}
+
+
+
+.connect-details {
+
+    flex:1;
+
+}
+
+
+
+.connect-name {
+
+    color:#ffb347;
+
+    letter-spacing:.15rem;
+
+}
+
+
+
+.connect-value {
+
+    color:#e6c38a;
+
+    font-size:.85rem;
+
+}
+
+
+
+.connect-action {
+
+    background:#1a1a1a;
+
+    color:#ffb347;
+
+    font-family:"DOS";
+
+    border:2px solid;
+
+    border-color:
+    #dfdfdf
+    #404040
+    #404040
+    #dfdfdf;
+
+
+    padding:.5rem .75rem;
+
+    cursor:pointer;
+
+}
+
+
+
+.connect-action:hover {
+
+    background:rgba(255,179,71,.1);
+
+    text-shadow:
+    0 0 10px #ffb347;
+
+}
+
+@media (max-width:768px) {
+
+    .connect-item {
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+        gap:.75rem;
+
+        padding:.75rem;
+
+    }
+
+
+    .connect-icon {
+
+        width:42px;
+        height:42px;
+
+        align-self:center;
+
+    }
+
+
+    .connect-details {
+
+        text-align:center;
+
+    }
+
+
+    .connect-name {
+
+        font-size:.85rem;
+
+    }
+
+
+    .connect-value {
+
+        font-size:.75rem;
+
+        word-break:break-word;
+
+    }
+
+
+    .connect-action {
+
+        width:100%;
+
+        padding:.65rem;
+
+        font-size:.8rem;
+
+    }
 
 }

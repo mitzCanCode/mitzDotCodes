@@ -2,16 +2,12 @@ import envelopeIcon from "../assets/icons/envelope.svg";
 
 export default {
 
-    name:"contact.exe",
+    name:"connect.exe",
 
     icon:envelopeIcon,
 
     category:"GENERAL",
 
-    action(){
-
-        console.log("launch contact app");
-
-    }
+    window:"connect"
 
 };
