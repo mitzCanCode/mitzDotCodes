@@ -1,6 +1,7 @@
 import { openProjectWindow } from "./projectWindow.js";
 import { openInfoWindow } from "./infoWindow.js";
-import {openConnectWindow} from "./connectWindow.js";
+import { openConnectWindow } from "./connectWindow.js";
+import { openSkillsWindow } from "./skillsWindow.js";
 
 export function createDesktop(apps, container) {
     container.innerHTML = "";
@@ -40,6 +41,9 @@ export function createDesktop(apps, container) {
                         openInfoWindow(app);
                     } else if (app.window === "connect") {
                         openConnectWindow();
+                    }
+                    else if (app.window === "skills") {
+                        openSkillsWindow();
                     }
                     else if (app.docFile) {
                         openProjectWindow(app);
