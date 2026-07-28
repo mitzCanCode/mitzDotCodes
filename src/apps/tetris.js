@@ -1,11 +1,10 @@
-import { openProjectWindow } from "../projectWindow.js";
 import gamepadIcon from "../assets/icons/gaming.svg";
 import retroComputerIcon from "../assets/icons/retro-pc-solid.svg";
 import themeIcon from "../assets/icons/themes.svg";
 
 export default {
 
-    name:"tetris.c",
+    name:"tetris.js",
 
     icon:gamepadIcon,
 
@@ -21,9 +20,6 @@ export default {
     ],
 
     action(){
-
-        openProjectWindow(this);
-
+        window.location.replace("https://tetris.mitz.codes")
     }
-
 };

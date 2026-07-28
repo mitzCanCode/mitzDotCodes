@@ -21,49 +21,51 @@ export function createDesktop(apps, container) {
     ];
 
     orderedCategories.forEach((category) => {
-        const section = document.createElement("div");
-        section.className = "desktop-category";
-        section.innerHTML = `<div class="desktop-category-label">[${category}]</div>`;
+    const section = document.createElement("div");
+    section.className = "desktop-category";
 
-        groupedApps[category].forEach((app) => {
-            const tile = document.createElement("button");
-            tile.type = "button";
-            tile.className = "desktop-tile";
-            tile.innerHTML = `
-                <div class="tile-icon">
-                    ${app.icon ? `<img src="${app.icon}" alt="${app.name}">` : "■"}
-                </div>
-                <div class="tile-name">${app.name}</div>
-            `;
+    section.innerHTML = `
+        <div class="desktop-category-label">[${category}]</div>
+        <div class="desktop-category-icons"></div>
+    `;
 
-            tile.onclick = () => {
-                try {
-                    if (app.window === "info") {
-                        openInfoWindow(app);
-                    } else if (app.window === "connect") {
-                        openConnectWindow();
-                    }
-                    else if (app.window === "skills") {
-                        openSkillsWindow();
-                    }
-                    else if (app.window === "credits") {
-                        openCreditsWindow(app);
-                    }
-                    else if (app.docFile) {
-                        openProjectWindow(app);
-                    }
-                    else if (typeof app.action === "function") {
-                        app.action();
-                    }
+    const iconContainer = section.querySelector(".desktop-category-icons");
 
-                } catch (err) {
-                    console.error(err);
+    groupedApps[category].forEach((app) => {
+        const tile = document.createElement("button");
+        tile.type = "button";
+        tile.className = "desktop-tile";
+
+        tile.innerHTML = `
+            <div class="tile-icon">
+                ${app.icon ? `<img src="${app.icon}" alt="${app.name}">` : "■"}
+            </div>
+            <div class="tile-name">${app.name}</div>
+        `;
+
+        tile.onclick = () => {
+            try {
+                if (app.window === "info") {
+                    openInfoWindow(app);
+                } else if (app.window === "connect") {
+                    openConnectWindow();
+                } else if (app.window === "skills") {
+                    openSkillsWindow();
+                } else if (app.window === "credits") {
+                    openCreditsWindow(app);
+                } else if (typeof app.action === "function") {
+                    app.action();
+                } else if (app.docFile) {
+                    openProjectWindow(app);
                 }
-            };
+            } catch (err) {
+                console.error(err);
+            }
+        };
 
-            section.appendChild(tile);
-        });
-
-        container.appendChild(section);
+        iconContainer.appendChild(tile);
     });
+
+    container.appendChild(section);
+});
 }
