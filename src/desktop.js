@@ -1,8 +1,8 @@
-import { openProjectWindow } from "./projectWindow.js";
-import { openInfoWindow } from "./infoWindow.js";
-import { openConnectWindow } from "./connectWindow.js";
-import { openSkillsWindow } from "./skillsWindow.js";
-import { openCreditsWindow } from "./creditsWindow.js";
+import { openProjectWindow } from "./windows/projectWindow.js";
+import { openInfoWindow } from "./windows/infoWindow.js";
+import { openConnectWindow } from "./windows/connectWindow.js";
+import { openSkillsWindow } from "./windows/skillsWindow.js";
+import { openCreditsWindow } from "./windows/creditsWindow.js";
 
 export function createDesktop(apps, container) {
     container.innerHTML = "";

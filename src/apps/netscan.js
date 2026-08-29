@@ -1,4 +1,4 @@
-import { openProjectWindow } from "../projectWindow.js";
+import { openProjectWindow } from "../windows/projectWindow.js";
 import retroComputerIcon from "../assets/icons/retro-pc-solid.svg";
 import pythonIcon from "../assets/icons/snake.svg";
 

@@ -64,7 +64,7 @@ async function loadMarkdown(fileName) {
   }
 
   try {
-    const response = await fetch(new URL(`../../assets/markdown/${fileName}`, import.meta.url));
+    const response = await fetch(new URL(`../assets/markdown/${fileName}`, import.meta.url));
     if (!response.ok) {
       return `## Unable to load ${fileName}`;
     }

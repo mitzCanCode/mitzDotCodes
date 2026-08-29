@@ -1,4 +1,4 @@
-import { openProjectWindow } from "../projectWindow.js";
+import { openProjectWindow } from "../windows/projectWindow.js";
 import appleIcon from "../assets/icons/apple.svg";
 import firebaseIcon from "../assets/icons/firebase.svg";
 import cloudflareIcon from "../assets/icons/cloudflare.svg";

@@ -440,7 +440,7 @@ skillsWindow.addEventListener(
 
     link.href =
     new URL(
-        `../../assets/certificates/${button.dataset.file}`,
+        `../assets/certificates/${button.dataset.file}`,
         import.meta.url
     );
 

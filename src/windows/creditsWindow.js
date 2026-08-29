@@ -167,7 +167,7 @@ async function loadMarkdown(fileName){
     try {
 
         const response = await fetch(
-            new URL(`../../assets/markdown/${fileName}`, import.meta.url)
+            new URL(`../assets/markdown/${fileName}`, import.meta.url)
         );
 
 
