@@ -809,7 +809,17 @@ transform:none;
 
     cursor:pointer;
 
-    transition:.3s;
+    transition:text-shadow .3s, transform .3s;
+
+    animation:enterSystemBlink 1.2s steps(1) infinite;
+
+}
+
+.enter-system.fade-in{
+
+    animation:
+        fadeIn .8s forwards,
+        enterSystemBlink 1.2s steps(1) infinite .8s;
 
 }
 
@@ -818,6 +828,20 @@ transform:none;
     text-shadow:0 0 15px #ffb347;
 
     transform:scale(1.03);
+
+    animation:none;
+    opacity:1;
+}
+
+@keyframes enterSystemBlink {
+
+    0%, 49% {
+        opacity: 1;
+    }
+
+    50%, 100% {
+        opacity: 0.25;
+    }
 
 }
 

@@ -107,6 +107,8 @@ const finishBoot = () => {
 const openDesktop = () => {
     if (button.disabled) return;
 
+    document.removeEventListener("keydown", openDesktop);
+
     terminal.classList.add("fade-out");
 
     setTimeout(() => {
@@ -126,7 +128,13 @@ button.addEventListener(
     openDesktop
 );
 
+const handleKeydown = (event) => {
+  if (event.key === "Enter") {
+    openDesktop();
+  }
+};
 
+document.addEventListener("keydown", handleKeydown);
 
 const bootDotInterval = setInterval(() => {
 
