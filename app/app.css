@@ -18,6 +18,42 @@ body,
   background:black;
 }
 
+@media (any-pointer: fine) {
+  html {
+    cursor: url("/cursors/astro_arrow.png") 0 0, auto;
+  }
+
+  a[href],
+  area[href],
+  button:not(:disabled),
+  input:not(:disabled):is([type="button"], [type="submit"], [type="reset"], [type="checkbox"], [type="radio"]),
+  select:not(:disabled),
+  summary,
+  [role="button"]:not([aria-disabled="true"]),
+  [role="link"]:not([aria-disabled="true"]),
+  [onclick]:not([aria-disabled="true"]) {
+    cursor: url("/cursors/astro_link.png") 8 0, pointer;
+  }
+
+  input:not([type]),
+  input[type="email"],
+  input[type="number"],
+  input[type="password"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="text"],
+  input[type="url"],
+  textarea,
+  [contenteditable="true"] {
+    cursor: url("/cursors/astro_beam.png") 19 20, text;
+  }
+
+  :disabled,
+  [aria-disabled="true"] {
+    cursor: url("/cursors/astro_unavail.png") 10 10, not-allowed;
+  }
+}
+
 
 
 /* =====================
