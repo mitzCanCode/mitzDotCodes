@@ -1,0 +1,168 @@
+.project-demo-media {
+  display: block;
+}
+
+.projects {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  width: 60%;
+  max-width: 60vw;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  z-index: 1;
+}
+
+.project-title {
+  font-size:clamp(1rem, 2vw, 1.25rem);
+  letter-spacing:.25rem;
+  text-transform:uppercase;
+  color:#ffb347;
+  text-shadow:1px 1px 0 #3a2a0a;
+  flex:1;
+}
+
+.project-header {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:1rem;
+    padding:0.5rem 0.75rem;
+}
+
+.projects.fade-in {
+  animation: fadeIn 0.8s forwards;
+}
+.projects-icons-content {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.projects-vertical-list {
+  display: flex;
+  flex: 0 0 15rem;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+
+.project-list-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  box-sizing: border-box;
+  background: none;
+  border: none;
+  font-family: "DOS";
+  cursor: pointer;
+  width: 100%;
+  flex: 0 0 auto;
+  padding: 0.65rem 0.9rem;
+  text-align: center;
+  position: relative;
+  transition: transform 160ms ease;
+}
+
+.project-list-item::before,
+.project-list-item::after {
+  content: ">";
+  flex: 0 0 1.25em;
+  text-align: center;
+}
+
+.project-list-item::before {
+  color: var(--project-color);
+  opacity: 0;
+  transition: opacity 160ms ease, text-shadow 160ms ease;
+}
+
+/* Invisible matching spacer keeps the label centered when the caret appears. */
+.project-list-item::after {
+  color: transparent;
+  pointer-events: none;
+  user-select: none;
+}
+
+.project-list-item .tile-name {
+  position: relative;
+  color: var(--project-color);
+  transition: color 160ms ease, text-shadow 160ms ease;
+}
+
+.project-list-item .tile-name::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.3em;
+  width: 100%;
+  height: 0.12em;
+  background: var(--project-color);
+  box-shadow: 0 0 0.45rem var(--project-color);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 220ms ease;
+  pointer-events: none;
+}
+
+.project-list-item:hover,
+.project-list-item:focus-visible,
+.project-list-item.is-selected {
+  outline: none;
+}
+
+.project-list-item:hover::before,
+.project-list-item:focus-visible::before,
+.project-list-item.is-selected::before {
+  opacity: 1;
+  text-shadow: 0 0 0.45rem var(--project-color);
+}
+
+.project-list-item:hover .tile-name,
+.project-list-item:focus-visible .tile-name,
+.project-list-item.is-selected .tile-name {
+  color: var(--project-color);
+  text-shadow: 0 0 0.45rem var(--project-color);
+}
+
+.project-list-item:hover .tile-name::after,
+.project-list-item:focus-visible .tile-name::after,
+.project-list-item.is-selected .tile-name::after {
+  transform: scaleX(1);
+}
+
+
+@media (max-width: 768px) {
+  .projects {
+    width: 80%;
+    max-width: 95vw;
+    padding: 8px;
+    gap: 0.5rem;
+  }
+  .projects-icons-content {
+    flex-direction: column;
+  }
+
+  .projects-vertical-list {
+    flex-basis: auto;
+  }
+
+  .project-video-showcase {
+    width: min(calc(16rem * var(--demo-scale)), 100%);
+  }
+
+  .desktop-tile {
+    gap: 4px;
+    margin-bottom: 5px;
+    padding: .25rem;
+  }
+}

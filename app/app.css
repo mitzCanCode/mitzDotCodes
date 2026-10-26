@@ -685,7 +685,7 @@ transform:none;
 
 .desktop-footer {
     position: absolute;
-    bottom: clamp(2.5rem, 10vh, 6rem);
+    bottom: clamp(2.5rem, 10vh, 8rem);
     left: 50%;
     transform: translateX(-50%);
     z-index: 2;
@@ -696,7 +696,31 @@ transform:none;
     text-shadow: 0 0 8px rgba(255, 179, 71, .7);
     /* white-space: nowrap; */
     text-align: center;
-    pointer-events: none;
+    pointer-events: auto;
+}
+
+@media (max-width: 768px) {
+    .desktop-footer {
+        display: none;
+    }
+}
+
+.credits-link {
+    appearance:none;
+    border:0;
+    padding:0;
+    background:transparent;
+    color:inherit;
+    cursor:pointer;
+    font:inherit;
+    letter-spacing:inherit;
+    text-decoration:underline;
+    text-shadow:inherit;
+}
+
+.credits-link:hover,
+.credits-link:focus-visible {
+    color:#ffb347;
 }
 
 .desktop-home {
