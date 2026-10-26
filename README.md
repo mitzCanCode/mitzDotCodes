@@ -1,87 +1,58 @@
-# Welcome to React Router!
+# mitz.codes
 
-A modern, production-ready template for building full-stack React applications using React Router.
+A React Router portfolio built as a static single-page application for Cloudflare Pages.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
-
-## Features
-
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
-
-## Getting Started
-
-### Installation
-
-Install the dependencies:
+## Development
 
 ```bash
-npm install
-```
-
-### Development
-
-Start the development server with HMR:
-
-```bash
+npm ci --include=dev
 npm run dev
 ```
 
-Your application will be available at `http://localhost:5173`.
+The development server is available at `http://localhost:5173`.
 
-## Building for Production
-
-Create a production build:
+## Checks and production preview
 
 ```bash
+npm run typecheck
 npm run build
+npm start
 ```
 
-## Deployment
+The build produces `build/client/index.html` and static assets. The local preview
+is available at `http://localhost:4173`. Vite preview is for verification, not
+production hosting.
 
-### Docker Deployment
+## Cloudflare Pages
 
-To build and run using Docker:
+Connect this repository to a Cloudflare Pages project with these settings:
+
+- **Framework preset:** None (use the settings below).
+- **Build command:** `npm run build`
+- **Build output directory:** `build/client`
+- **Root directory:** repository root
+- **Environment variable:** `NODE_VERSION=24`
+
+Allow Pages to install npm dependencies, including development dependencies used
+by the build. No Pages Functions, Worker, or server entry point is required.
+
+Pages automatically serves `index.html` for paths that do not match a static file,
+so direct visits and refreshes on `/boot`, `/main`, and `/projects?category=web`
+work. Do not add a top-level `404.html`, which disables Pages' default SPA fallback.
+The home route redirects to `/boot` in the browser.
+
+For manual deployment, upload the contents of `build/client` using Pages'
+Direct Upload flow after building.
+
+Other static hosts must also be configured to serve `index.html` as the SPA fallback.
+
+## Optional Docker deployment
+
+The Docker image serves the same static build with nginx and SPA fallback:
 
 ```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
+docker build -t mitz-codes .
+docker run --rm -p 3000:80 mitz-codes
 ```
 
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
-
----
-
-Built with ❤️ using React Router.
+Open `http://localhost:3000`.
