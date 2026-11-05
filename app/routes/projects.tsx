@@ -39,6 +39,24 @@ export default function ProjectsRoute() {
   const isMobile = useIsMobile();
 
   const websites: ShowcaseProject[] = [
+      {
+      name: "scriptee",
+      description:
+        "A website for the scriptee.app project, a project that allows you to create and share your own music.",
+      hex: "white",
+      underDevelopment: false,
+      location: "https://scriptee.app",
+      demo: { type: "gallery", imagePath: "public/showcases/www/scriptee.png" },
+    },
+    {
+      name: "NCK Active",
+      description:
+        "A website for the NCK Active project, a project that allows you to order food from NCK.",
+      hex: "white",
+      underDevelopment: false,
+      location: "https://nckactive.com",
+      demo: { type: "gallery", imagePath: "public/showcases/www/nckactive.png" },
+    },
     {
       name: "Sidestage",
       description:
@@ -46,7 +64,7 @@ export default function ProjectsRoute() {
       hex: "white",
       underDevelopment: false,
       location: "https://sidestage.eu",
-      demo: { type: "gallery", folder: "/showcases/www/sidestage" },
+      demo: { type: "gallery", imagePath: "public/showcases/www/sidestage.png" },
     },
     {
       name: "Adelvassi",
@@ -55,7 +73,7 @@ export default function ProjectsRoute() {
       hex: "white",
       underDevelopment: false,
       location: "https://adelvassi.com",
-      demo: { type: "gallery", folder: "/showcases/www/adelvassi" },
+      demo: { type: "gallery", imagePath: "public/showcases/www/adelvassi.png" },
     },
     {
       name: "Tetris.js",
@@ -64,34 +82,17 @@ export default function ProjectsRoute() {
       hex: "white",
       underDevelopment: false,
       location: "https://tetris.mitz.codes",
-      demo: { type: "gallery", folder: "/showcases/www/tetris-js" },
+      demo: { type: "gallery", imagePath: "public/showcases/www/tetris-js.png" },
     },
+
     {
-      name: "ESO-FOODS",
+      name: "Researcher Portfolio",
       description:
-        "A website for the ESO-FOODS project, a project that allows you to order food from ESO.",
+        "A website for the Research project, a project that allows you to explore academic research.",
       hex: "white",
-      underDevelopment: true,
-      location: null,
-      demo: { type: "gallery", folder: "/showcases/www/eso-foods" },
-    },
-    {
-      name: "Research Website",
-      description:
-        "",
-      hex: "white",
-      underDevelopment: true,
-      location: null,
-      demo: { type: "gallery", folder: "/showcases/www/glossa-js" },
-    },
-    {
-      name: "glossa.js",
-      description:
-        "A website for the glossa.js project, a project that allows you to create and share your own music.",
-      hex: "white",
-      underDevelopment: true,
-      location: null,
-      demo: { type: "gallery", folder: "/showcases/www/glossa-js" },
+      underDevelopment: false,
+      location: "https://ifigeneiakarani.gr/",
+      demo: { type: "gallery", imagePath: "public/showcases/www/researcher-portfolio.png" },
     },
   ];
 
@@ -102,8 +103,7 @@ export default function ProjectsRoute() {
         "A website for the Sololift project, a project that allows you to create and share your own music.",
       hex: "white",
       underDevelopment: false,
-      location: "https://sololift.app",
-      demo: { type: "video", videoPath: "/showcases/apps/sololift.mp4" },
+      location: "https://sololift.app"
     },
     {
       name: "DevPoint",
@@ -112,7 +112,6 @@ export default function ProjectsRoute() {
       hex: "white",
       underDevelopment: false,
       location: "https://devpoint.mitz.codes",
-      demo: { type: "video", videoPath: "/showcases/apps/devpoint_showcase.mp4" },
     },
     {
       name: "HotPotatoes",
@@ -121,16 +120,6 @@ export default function ProjectsRoute() {
       hex: "white",
       underDevelopment: true,
       location: null,
-      demo: { type: "video", videoPath: "/showcases/apps/hotpotatoes.mp4" },
-    },
-    {
-      name: "MarketingApp",
-      description:
-        "A website for the MarketingApp project, a project that allows you to create and share your own music.",
-      hex: "white",
-      underDevelopment: true,
-      location: null,
-      demo: { type: "video", videoPath: "/showcases/apps/marketing-app.mp4" },
     },
   ];
 

@@ -6,7 +6,7 @@ import "./verticalShowcase.css";
 
 export type ProjectDemo =
   | { type: "video"; videoPath: string }
-  | { type: "gallery"; folder: string };
+  | { type: "gallery"; imagePath: string };
 
 export type ShowcaseProject = {
   name: string;

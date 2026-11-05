@@ -7,7 +7,7 @@ import "./gridShowcase.css";
 
 function screenshotFor(project: ShowcaseProject): string | null {
   if (project.demo?.type === "gallery") {
-    return `${project.demo.folder}/cover.png`;
+    return `${project.demo.imagePath}`;
   }
   return null;
 }
