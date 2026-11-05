@@ -72,7 +72,7 @@ export default function ProjectsRoute() {
         "A website for the Adelvassi project, a project that allows you to create and share your own music.",
       hex: "white",
       underDevelopment: false,
-      location: "https://adelvassi.com",
+      location: "https://adelvassi.gr",
       demo: { type: "gallery", imagePath: "public/showcases/www/adelvassi.png" },
     },
     {
