@@ -668,12 +668,8 @@ transform:none;
     width:min(100%, 42rem);
     max-height:min(60vh, 34rem);
     overflow:auto;
-    background:rgba(8,8,8,.98);
     border:2px solid;
-    border-color:#dfdfdf #404040 #404040 #dfdfdf;
-    box-shadow:inset 1px 1px 0 #1a1a1a, inset -1px -1px 0 #5a5a5a, 0 0 40px rgba(0,0,0,.75);
     font-family:"DOS", monospace;
-    color:#ffb347;
 }
 
 .desktop-icons-content {

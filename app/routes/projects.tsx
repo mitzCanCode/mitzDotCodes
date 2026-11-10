@@ -43,7 +43,7 @@ export default function ProjectsRoute() {
       name: "scriptee",
       description:
         "A website for the scriptee.app project, a project that allows you to create and share your own music.",
-      hex: "white",
+      hex: "purple",
       underDevelopment: false,
       location: "https://scriptee.app",
       demo: { type: "gallery", imagePath: "public/showcases/www/scriptee.png" },
@@ -52,7 +52,7 @@ export default function ProjectsRoute() {
       name: "NCK Active",
       description:
         "A website for the NCK Active project, a project that allows you to order food from NCK.",
-      hex: "white",
+      hex: "cyan",
       underDevelopment: false,
       location: "https://nckactive.com",
       demo: { type: "gallery", imagePath: "public/showcases/www/nckactive.png" },
@@ -61,7 +61,7 @@ export default function ProjectsRoute() {
       name: "Sidestage",
       description:
         "A website for the Sidestage project, a project that allows you to create and share your own music.",
-      hex: "white",
+      hex: "gold",
       underDevelopment: false,
       location: "https://sidestage.eu",
       demo: { type: "gallery", imagePath: "public/showcases/www/sidestage.png" },
@@ -70,7 +70,7 @@ export default function ProjectsRoute() {
       name: "Adelvassi",
       description:
         "A website for the Adelvassi project, a project that allows you to create and share your own music.",
-      hex: "white",
+      hex: "orange",
       underDevelopment: false,
       location: "https://adelvassi.gr",
       demo: { type: "gallery", imagePath: "public/showcases/www/adelvassi.png" },
@@ -79,7 +79,7 @@ export default function ProjectsRoute() {
       name: "Tetris.js",
       description:
         "A website for the Tetris.js project, a project that allows you to play Tetris in your browser.",
-      hex: "white",
+      hex: "lime",
       underDevelopment: false,
       location: "https://tetris.mitz.codes",
       demo: { type: "gallery", imagePath: "public/showcases/www/tetris-js.png" },
@@ -101,7 +101,7 @@ export default function ProjectsRoute() {
       name: "Sololift",
       description:
         "A website for the Sololift project, a project that allows you to create and share your own music.",
-      hex: "white",
+      hex: "#DC143C",
       underDevelopment: false,
       location: "https://sololift.app"
     },
@@ -109,7 +109,7 @@ export default function ProjectsRoute() {
       name: "DevPoint",
       description:
         "A website for the DevPoint project, a project that allows you to create and share your own music.",
-      hex: "white",
+      hex: "#BF5AF2",
       underDevelopment: false,
       location: "https://devpoint.mitz.codes",
     },
@@ -117,7 +117,7 @@ export default function ProjectsRoute() {
       name: "HotPotatoes",
       description:
         "A website for the HotPotatoes project, a project that allows you to create and share your own music.",
-      hex: "white",
+      hex: "cyan",
       underDevelopment: true,
       location: null,
     },
@@ -150,6 +150,15 @@ export default function ProjectsRoute() {
       location: "https://github.com/mitzCanCode/Tetris",
       language: "c",
       demo: { type: "video", videoPath: "/showcases/cli/tetris-c.mp4" },
+    },
+    {
+      name: "pacman.cpp",
+      description: "A CLI tool for playing Pacman.",
+      hex: "yellow",
+      underDevelopment: false,
+      location: "https://github.com/mitzCanCode/Pacman",
+      language: "c++",
+      demo: { type: "video", videoPath: "/showcases/cli/pacman-cpp.mp4" },
     },
   ];
 

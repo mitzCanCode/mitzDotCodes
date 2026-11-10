@@ -4,10 +4,11 @@ import { Link } from "react-router";
 import { OldTVFrame } from "../../tv/OldTVFrame";
 
 const apps = [
-  { name: "README.md", icon: "/icons/person.svg", category: "GENERAL", action: "", hex:"white", iconSize: "3rem", location: "/readme" },
-  { name: "CONNECT.exe", icon: "/icons/envelope.svg", category: "GENERAL", action: "", hex:"white", iconSize: "3rem", location: "/connect" },
-  { name: "SKILLS.sys", icon: "/icons/programming.svg", category: "GENERAL", action: "", hex:"white", iconSize: "3rem", location: "/skills" },
-  { name: "WWW", icon: "globe.gif", category: "PROJECTS", action: "open", hex:"white", iconSize: "5rem", location: "/projects?category=web" },
+  { name: "README.md", icon: "/person.gif", category: "GENERAL", action: "", hex:"white", iconSize: "4rem", location: "/readme" },
+  { name: "skills.sys", icon: "/brain.gif", category: "GENERAL", action: "", hex:"white", iconSize: "4rem", location: "/skills" },
+  { name: "contact.md", icon: "/tv.gif", category: "GENERAL", action: "", hex:"white", iconSize: "4rem", location: "/contact" },
+  { name: "connect.exe", icon: "/heart_cube.gif", category: "GENERAL", action: "", hex:"white", iconSize: "4rem", location: "/connect" },
+  { name: "WWW", icon: "/saturn.gif", category: "PROJECTS", action: "open", hex:"white", iconSize: "5rem", location: "/projects?category=web" },
   { name: "Mobile DEV", icon: "/nokia.gif", category: "PROJECTS", action: "open", hex:"white", iconSize: "5rem", location: "/projects?category=mobile" },
   { name: "CLI", icon: "/computer-pixel.gif", category: "PROJECTS", action: "open", hex:"white", iconSize: "5rem", location: "/projects?category=cli" },
   { name: "tetris.js", icon: "/tetrominos.gif", category: "PROJECTS", action: "open", hex:"white", iconSize: "5rem", location: "https://tetris.mitz.codes" },
@@ -48,9 +49,9 @@ export function Main() {
             className="desktop-icons-window"
             aria-label="Application launcher"
           >
-            <header className="window-header">
+            {/* <header className="window-header">
               <h1 className="window-title">APPLICATIONS</h1>
-            </header>
+            </header> */}
             <div className="desktop-icons-content">
               {categories.map((category) => (
                 // <section className="desktop-category" key={category}>
