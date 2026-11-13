@@ -10,8 +10,8 @@ interface OldTVFrameProps {
 
 export function OldTVFrame({ children }: OldTVFrameProps) {
   return (
-    <div className="fixed inset-0 overflow-hidden bg-black">
-      <div className="relative h-screen w-screen">
+    <div className="tv-frame fixed inset-0 overflow-hidden bg-black">
+      <div className="relative h-full w-full">
         <CRTScreen>{children}</CRTScreen>
 
         {/* TV frame sits above everything */}
