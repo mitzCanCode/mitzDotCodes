@@ -4,7 +4,7 @@ import { Link } from "react-router";
 import { OldTVFrame } from "../../tv/OldTVFrame";
 
 const apps = [
-  { name: "README.md", icon: "/person.gif", category: "GENERAL", action: "", hex:"white", iconSize: "5rem", location: "/readme" },
+  { name: "README.md", icon: "/person.gif", category: "GENERAL", action: "open", hex:"white", iconSize: "5rem", location: "/readme" },
   { name: "skills.sys", icon: "/coin.gif", category: "GENERAL", action: "", hex:"white", iconSize: "5rem", location: "/skills" },
   { name: "contact.md", icon: "/call-calling.gif", category: "GENERAL", action: "", hex:"white", iconSize: "5rem", location: "/contact" },
   { name: "connect.exe", icon: "/heart_cube.gif", category: "GENERAL", action: "", hex:"white", iconSize: "5rem", location: "/connect" },

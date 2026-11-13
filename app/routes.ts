@@ -5,4 +5,5 @@ export default [
   route("boot", "routes/boot.tsx"),
   route("main", "routes/main.tsx"),
   route("projects", "routes/projects.tsx"),
+  route("readme", "routes/readme.tsx"),
 ] satisfies RouteConfig;
