@@ -30,8 +30,8 @@
   font-size:clamp(1rem, 2vw, 1.25rem);
   letter-spacing:.25rem;
   text-transform:uppercase;
-  color:#ffb347;
-  text-shadow:1px 1px 0 #3a2a0a;
+  color:#ff69b4;
+  text-shadow:1px 1px 0 #3a1025;
   flex:1;
 }
 

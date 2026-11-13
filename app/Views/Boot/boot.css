@@ -4,7 +4,7 @@
     width:min(90vw, 900px);
     margin:0 auto;
     min-height: unset;
-    color:#e6c38a;
+    color:#f3a6cb;
     font-size:2rem;
     line-height:1.45;
     letter-spacing:clamp(1px, 0.4vw, 3px);
@@ -102,8 +102,8 @@
     font-size:clamp(.5rem, 1.8vw, 1.35rem);
     line-height:1.05;
     letter-spacing:calc(0.05rem + 0.015vw);
-    color:#ffb347;
-    text-shadow:0 0 10px #ffb347;
+    color:#ff69b4;
+    text-shadow:0 0 10px #ff69b4;
     white-space:pre;
     overflow-wrap:normal;
     text-align:left;
@@ -116,8 +116,8 @@
     overflow:hidden;
     margin:0;
     padding:.9rem 0;
-    border-top:1px solid rgba(255,179,71,.15);
-    border-bottom:1px solid rgba(255,179,71,.15);
+    border-top:1px solid rgba(255,105,180,.15);
+    border-bottom:1px solid rgba(255,105,180,.15);
 }
 
 .ticker-track{
@@ -138,7 +138,7 @@
 
 .ticker-track span{
     flex:none;
-    color:#b9854c;
+    color:#d96b9f;
     font-size:clamp(.75rem, 1.6vw, .95rem);
     letter-spacing:.25rem;
     white-space:nowrap;
@@ -162,7 +162,7 @@
 .enter-system {
     background: none;
     border: none;
-    color: #ffb347;
+    color: #ff69b4;
     font-family: "DOS", monospace;
     font-size: 1.3rem;
     letter-spacing: 0.25rem;
@@ -184,9 +184,9 @@
 
 /* Hover effect */
 .enter-system:hover {
-    color: #ffb347;
+    color: #ff69b4;
     opacity: 1;
-    text-shadow: 0 0 15px #ffb347;
+    text-shadow: 0 0 15px #ff69b4;
     transform: scale(1.03);
     animation: none;
 }

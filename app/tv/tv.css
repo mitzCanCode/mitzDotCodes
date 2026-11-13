@@ -86,7 +86,7 @@
 .crt-content :is(.desktop, .projects, .projects-grid, .terminal, .window-content) {
     scrollbar-gutter:stable;
     overscroll-behavior:contain;
-    scrollbar-color:#b9854c #1a1a1a;
+    scrollbar-color:#d96b9f #1a1a1a;
     scrollbar-width:thin;
     scroll-padding-block:1rem;
 }
@@ -112,7 +112,7 @@
 .crt-content ::-webkit-scrollbar-thumb {
     background:#3a3a3a;
     border:2px solid;
-    border-color:#ffb347 #2a2a2a #2a2a2a #ffb347;
+    border-color:#ff69b4 #2a2a2a #2a2a2a #ff69b4;
     box-shadow:inset 1px 1px 0 #5a5a5a, inset -1px -1px 0 #0a0a0a;
 }
 
