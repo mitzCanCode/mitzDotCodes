@@ -116,7 +116,7 @@ function CreditsWindow({ open, onClose }: { open: boolean; onClose: () => void }
             CREDITS.TXT
           </h2>
           <button className="window-close" type="button" onClick={onClose} aria-label="Close credits">
-            ×
+            X
           </button>
         </header>
         <div className="window-content">
