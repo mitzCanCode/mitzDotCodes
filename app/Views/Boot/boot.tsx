@@ -5,7 +5,7 @@ import { OldTVFrame } from "../../tv/OldTVFrame";
 
 import "./boot.css";
 
-const dotStates = [".", "..", "..."];
+const dotStates = ["", ".", "..", "..."];
 
 export function Boot() {
   const navigate = useNavigate();

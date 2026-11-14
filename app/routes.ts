@@ -4,6 +4,7 @@ export default [
   index("routes/home.tsx"),
   route("boot", "routes/boot.tsx"),
   route("main", "routes/main.tsx"),
+  route("connect", "routes/connect.tsx"),
   route("projects", "routes/projects.tsx"),
   route("readme", "routes/readme.tsx"),
 ] satisfies RouteConfig;

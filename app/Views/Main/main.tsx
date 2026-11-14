@@ -7,7 +7,7 @@ const apps = [
   { name: "README.md", icon: "/person.gif", category: "GENERAL", action: "open", hex:"white", iconSize: "5rem", location: "/readme" },
   { name: "skills.sys", icon: "/coin.gif", category: "GENERAL", action: "", hex:"white", iconSize: "5rem", location: "/skills" },
   { name: "contact.md", icon: "/call-calling.gif", category: "GENERAL", action: "", hex:"white", iconSize: "5rem", location: "/contact" },
-  { name: "connect.exe", icon: "/heart_cube.gif", category: "GENERAL", action: "", hex:"white", iconSize: "5rem", location: "/connect" },
+  { name: "connect.exe", icon: "/heart_cube.gif", category: "GENERAL", action: "open", hex:"white", iconSize: "5rem", location: "/connect" },
   { name: "WWW", icon: "/saturn.gif", category: "PROJECTS", action: "open", hex:"white", iconSize: "5rem", location: "/projects?category=web" },
   { name: "Mobile DEV", icon: "/nokia.gif", category: "PROJECTS", action: "open", hex:"white", iconSize: "5rem", location: "/projects?category=mobile" },
   { name: "CLI", icon: "/computer-pixel.gif", category: "PROJECTS", action: "open", hex:"white", iconSize: "5rem", location: "/projects?category=cli" },
