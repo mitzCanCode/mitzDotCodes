@@ -19,11 +19,19 @@
 
 @media (max-width:768px) {
     .terminal {
-        width:65vw;
+        width:90vw;
         font-size:1rem;
         line-height:1.5;
         letter-spacing:1px;
     }
+
+    .logo-container {
+        width:100%;
+    }
+}
+
+.crt-content > .terminal {
+    scrollbar-gutter:stable both-edges;
 }
 
 
@@ -80,7 +88,7 @@
 
 
 .logo-container {
-    width:min(30vw, 95vw);
+    width:min(90vw, 560px);
     max-width:100%;
     min-width:0;
     display:flex;
@@ -99,7 +107,7 @@
     margin:0;
     padding:0;
     font-family:"DOS", monospace;
-    font-size:clamp(.5rem, 1.8vw, 1.35rem);
+    font-size:clamp(.35rem, 1.8vw, 1.35rem);
     line-height:1.05;
     letter-spacing:calc(0.05rem + 0.015vw);
     color:#ff69b4;
