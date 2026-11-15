@@ -8,7 +8,7 @@ export function ReadMe() {
     return (
         <OldTVFrame>
             <>
-                <Link className="desktop-home" to="/boot" aria-label="Return to boot">
+                <Link className="desktop-home" to="/main" aria-label="Return to desktop">
                     <img src="/globe.gif" style={{ width: "5rem", height: "5rem" }} alt="" />
                 </Link>
                 <main className="desktop fade-in readme-content" aria-label="mitzCanCode about text">
