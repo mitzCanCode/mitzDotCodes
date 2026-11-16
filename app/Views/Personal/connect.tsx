@@ -41,6 +41,13 @@ const connections = [
     icon: "/icons/envelope.svg",
     action: "Send email",
   },
+  {
+    name: "Credly",
+    value: "https://www.credly.com/users/mitz",
+    href: "https://www.credly.com/users/mitz",
+    icon: "/icons/badge-check.svg",
+    action: "View profile",
+  },
 ];
 
 export function Connect() {
