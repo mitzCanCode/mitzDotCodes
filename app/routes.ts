@@ -7,4 +7,5 @@ export default [
   route("connect", "routes/connect.tsx"),
   route("projects", "routes/projects.tsx"),
   route("readme", "routes/readme.tsx"),
+  route("contact", "routes/contact.tsx"),
 ] satisfies RouteConfig;
