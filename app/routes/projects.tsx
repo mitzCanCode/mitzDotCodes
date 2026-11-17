@@ -41,8 +41,7 @@ export default function ProjectsRoute() {
   const websites: ShowcaseProject[] = [
       {
       name: "scriptee",
-      description:
-        "A website for the scriptee.app project, a project that allows you to create and share your own music.",
+      description: "A content idea generation platform for businesses and entrepreneurs who struggle with advertising on social media.",
       hex: "purple",
       underDevelopment: false,
       location: "https://scriptee.app",
@@ -50,8 +49,7 @@ export default function ProjectsRoute() {
     },
     {
       name: "NCK Active",
-      description:
-        "A website for the NCK Active project, a project that allows you to order food from NCK.",
+      description: "A website for a digital agency specializing in e-commerce stores, custom websites and software development.",
       hex: "cyan",
       underDevelopment: false,
       location: "https://nckactive.com",
@@ -59,8 +57,7 @@ export default function ProjectsRoute() {
     },
     {
       name: "Sidestage",
-      description:
-        "A website for the Sidestage project, a project that allows you to create and share your own music.",
+      description: "A website for a luxury villa rental showcasing properties in Costa Navarino, Greece, with a focus on elegant design and high-quality imagery.",
       hex: "gold",
       underDevelopment: false,
       location: "https://sidestage.eu",
@@ -68,8 +65,7 @@ export default function ProjectsRoute() {
     },
     {
       name: "Adelvassi",
-      description:
-        "A website for the Adelvassi project, a project that allows you to create and share your own music.",
+      description: "A corporate website for a Greek manufacturer of brooms and brushes, showcasing its products, history, and expertise.",
       hex: "orange",
       underDevelopment: false,
       location: "https://adelvassi.gr",
@@ -77,8 +73,7 @@ export default function ProjectsRoute() {
     },
     {
       name: "Tetris.js",
-      description:
-        "A website for the Tetris.js project, a project that allows you to play Tetris in your browser.",
+      description: "A browser-based Tetris game built with JavaScript. Made as a port of a C implementation of Tetris I made.",
       hex: "lime",
       underDevelopment: false,
       location: "https://tetris.mitz.codes",
@@ -87,8 +82,7 @@ export default function ProjectsRoute() {
 
     {
       name: "Researcher Portfolio",
-      description:
-        "A website for the Research project, a project that allows you to explore academic research.",
+      description: "A personal academic portfolio website (with WCAG 2.0 compliance) for a psychology researcher.",
       hex: "white",
       underDevelopment: false,
       location: "https://ifigeneiakarani.gr/",

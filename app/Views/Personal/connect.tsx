@@ -39,7 +39,7 @@ const connections = [
     value: "dimitris.chatzi@proton.me",
     href: "mailto:dimitris.chatzi@proton.me",
     icon: "/icons/envelope.svg",
-    action: "Send email",
+    action: "Get in touch",
   },
   {
     name: "Credly",
