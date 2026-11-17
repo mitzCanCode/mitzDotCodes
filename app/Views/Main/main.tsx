@@ -4,27 +4,15 @@ import { Link } from "react-router";
 import { OldTVFrame } from "../../tv/OldTVFrame";
 
 const apps = [
-  { name: "README.md", icon: "/person.gif", category: "GENERAL", action: "open", hex:"white", iconSize: "5rem", location: "/readme" },
-  { name: "skills.sys", icon: "/coin.gif", category: "GENERAL", action: "open", hex:"white", iconSize: "5rem", location: "/skills" },
-  { name: "contact.md", icon: "/call-calling.gif", category: "GENERAL", action: "open", hex:"white", iconSize: "5rem", location: "/contact" },
-  { name: "connect.exe", icon: "/heart_cube.gif", category: "GENERAL", action: "open", hex:"white", iconSize: "5rem", location: "/connect" },
-  { name: "WWW", icon: "/saturn.gif", category: "PROJECTS", action: "open", hex:"white", iconSize: "5rem", location: "/projects?category=web" },
-  { name: "Mobile DEV", icon: "/nokia.gif", category: "PROJECTS", action: "open", hex:"white", iconSize: "5rem", location: "/projects?category=mobile" },
-  { name: "CLI", icon: "/computer-pixel.gif", category: "PROJECTS", action: "open", hex:"white", iconSize: "5rem", location: "/projects?category=cli" },
-  { name: "tetris.js", icon: "/tetrominos.gif", category: "PROJECTS", action: "open", hex:"white", iconSize: "5rem", location: "https://tetris.mitz.codes" },
+  { name: "README.md", icon: "/gifs/person.gif", category: "GENERAL", action: "open", hex:"white", iconSize: "5rem", location: "/readme" },
+  { name: "skills.sys", icon: "/gifs/coin.gif", category: "GENERAL", action: "open", hex:"white", iconSize: "5rem", location: "/skills" },
+  { name: "contact.md", icon: "/gifs/call-calling.gif", category: "GENERAL", action: "open", hex:"white", iconSize: "5rem", location: "/contact" },
+  { name: "connect.exe", icon: "/gifs/heart_cube.gif", category: "GENERAL", action: "open", hex:"white", iconSize: "5rem", location: "/connect" },
+  { name: "WWW", icon: "/gifs/saturn.gif", category: "PROJECTS", action: "open", hex:"white", iconSize: "5rem", location: "/projects?category=web" },
+  { name: "Mobile DEV", icon: "/gifs/nokia.gif", category: "PROJECTS", action: "open", hex:"white", iconSize: "5rem", location: "/projects?category=mobile" },
+  { name: "CLI", icon: "/gifs/computer-pixel.gif", category: "PROJECTS", action: "open", hex:"white", iconSize: "5rem", location: "/projects?category=cli" },
+  { name: "tetris.js", icon: "/gifs/tetrominos.gif", category: "PROJECTS", action: "open", hex:"white", iconSize: "5rem", location: "https://tetris.mitz.codes" },
 ];
-
-// const apps1 = {
-//   "README.md": { icon: "/icons/person.svg", category: "GENERAL", action: "", hex:"white", iconSize: "3rem", location: "/readme" },
-//   "CONNECT.exe": { icon: "/icons/envelope.svg", category: "GENERAL", action: "", hex:"white", iconSize: "3rem", location: "/connect" },
-//   "SKILLS.sys": { icon: "/icons/programming.svg", category: "GENERAL", action: "", hex:"white", iconSize: "3rem", location: "/skills" },
-//   "CREDITS.txt": { icon: "/icons/at.svg", category: "GENERAL", action: "", hex:"white", iconSize: "3rem", location: "/credits" },
-//   "WWW": { icon: "globe.gif", category: "PROJECTS", action: "open", hex:"white", iconSize: "5rem", location: "/projects?category=web" },
-//   "Mobile DEV": { icon: "/nokia.gif", category: "PROJECTS", action: "open", hex:"white", iconSize: "5rem", location: "/projects?category=mobile" },
-//   "CLI": { icon: "/computer-pixel.gif", category: "PROJECTS", action: "open", hex:"white", iconSize: "5rem", location: "/projects?category=cli" },
-//   "tetris.js": { icon: "/tetrominos.gif", category: "PROJECTS", action: "open", hex:"white", iconSize: "5rem", location: "https://tetris.mitz.codes" },
-// }
-
 
 export function Main() {
   const categories = ["GENERAL", "PROJECTS"] as const;
@@ -34,7 +22,7 @@ export function Main() {
     <OldTVFrame>
       <>
         <Link className="desktop-home" to="/boot" aria-label="Return to boot">
-          <img src="/globe.gif" style={{ width: "5rem", height: "5rem" }} alt="" />
+          <img src="/gifs/globe.gif" style={{ width: "5rem", height: "5rem" }} alt="" />
         </Link>
         <footer className="desktop-footer">
           Made by yours truly, with no harm caused to any AI model. Special thanks to the creators behind the

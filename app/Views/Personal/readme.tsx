@@ -9,20 +9,22 @@ export function ReadMe() {
         <OldTVFrame>
             <>
                 <Link className="desktop-home" to="/main" aria-label="Return to desktop">
-                    <img src="/globe.gif" style={{ width: "5rem", height: "5rem" }} alt="" />
+                    <img src="/gifs/globe.gif" style={{ width: "5rem", height: "5rem" }} alt="" />
                 </Link>
                 <main className="desktop fade-in readme-content" aria-label="mitzCanCode about text">
                     <div className="readme-intro">
-                    <img className="readme-portrait" src="/me.png" alt="The thought of mitz" />
+                    
+                        <img className="readme-portrait" src="/me.png" alt="The thought of mitz" />
 
-                    <div className="readme-intro-copy">
-                        <h1 className="readme-title">About me!</h1>
-                        <p>
-                            Hello! It seems you have stumbled upon my little corner on the internet, make yourself comfortable and take a look around! This is a personal portfolio website that I have built to showcase my work and skills as a software developer.
-                        </p>
+                        <div className="readme-intro-copy">
+                            <h1 className="readme-title">About me!</h1>
+                            <p>
+                                Hello! It seems you have stumbled upon my little corner on the internet, make yourself comfortable and take a look around! This is a personal portfolio website that I have built to showcase my work and skills as a software developer.
+                            </p>
 
+                        </div>
+                    
                     </div>
-                                </div>
 
                         <p>
                             My name is Dimitris Chatzigeorgiou, I am a Computer Science undergraduate at the University of Piraeus, and in my part-time I enjoy creating other little spaces on the internet such as this one! My software development journey started back in February 22, 2023, when I first started writing code in high school.

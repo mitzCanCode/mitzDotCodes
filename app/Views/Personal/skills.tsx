@@ -46,7 +46,7 @@ export function Skills() {
     <OldTVFrame>
       <>
         <Link className="desktop-home" to="/main" aria-label="Return to desktop">
-          <img src="/globe.gif" style={{ width: "5rem", height: "5rem" }} alt="" />
+          <img src="/gifs/globe.gif" style={{ width: "5rem", height: "5rem" }} alt="" />
         </Link>
         <main className="desktop fade-in connect-content skills-content" aria-labelledby="skills-title">
           <header className="connect-heading">
@@ -84,7 +84,7 @@ export function Skills() {
                     <h3>{certificate.name}</h3>
                     <p>{certificate.issuer}</p>
                   </div>
-                  <div className="skills-certificate-actions">
+                  <div className="skills-actions">
                     <a className="connect-action" href={certificate.downloadUrl} download>
                       Download
                     </a>
@@ -106,14 +106,25 @@ export function Skills() {
                 </li>
               ))}
             </ul>
-            <a
-              className="connect-action skills-credly-action"
-              href="https://www.credly.com/users/mitz"
-              target="_blank"
-              rel="noreferrer"
-            >
-              View my Credly profile
-            </a>
+            <div className="skills-actions">
+
+              <a
+                className="connect-action skills-credly-action"
+                href="https://www.credly.com/users/mitz"
+                target="_blank"
+                rel="noreferrer"
+              >
+                View my Credly profile
+              </a>
+              <a
+                className="connect-action skills-credly-action"
+                href="/cv.pdf"
+                download
+              >
+                Download my CV
+              </a>
+            </div>
+
           </section>
 
           <section className="skills-section" aria-labelledby="technologies-title">

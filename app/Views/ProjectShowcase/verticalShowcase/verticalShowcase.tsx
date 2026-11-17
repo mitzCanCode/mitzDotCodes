@@ -30,7 +30,7 @@ export function VerticalShowcase({
     <OldTVFrame>
       <>
         <Link className="desktop-home" to="/main" aria-label="Return to home">
-          <img src="/globe.gif" alt="" />
+          <img src="/gifs/globe.gif" alt="" />
         </Link>
         <main className="projects fade-in" aria-label="mitzCanCode desktop">
           <header className="project-header">

@@ -70,7 +70,7 @@ export function Connect() {
     <OldTVFrame>
       <>
         <Link className="desktop-home" to="/main" aria-label="Return to desktop">
-          <img src="/globe.gif" style={{ width: "5rem", height: "5rem" }} alt="" />
+          <img src="/gifs/globe.gif" style={{ width: "5rem", height: "5rem" }} alt="" />
         </Link>
         <main className="desktop fade-in connect-content" aria-labelledby="connect-title">
           <header className="connect-heading">

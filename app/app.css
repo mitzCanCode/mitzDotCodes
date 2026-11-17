@@ -1433,10 +1433,10 @@ filter:blur(8px);
     border:2px solid;
 
     border-color:
-    #dfdfdf
+    #ff69b4
     #404040
     #404040
-    #dfdfdf;
+    #ff69b4;
 
 
     padding:.5rem .75rem;
@@ -2216,4 +2216,17 @@ filter:blur(8px);
 
 
 
+}
+
+.skills-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .skills-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }

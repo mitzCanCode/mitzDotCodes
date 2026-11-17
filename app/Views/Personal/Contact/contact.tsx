@@ -13,7 +13,7 @@ export function Contact() {
           aria-label="Return to desktop"
         >
           <img
-            src="/globe.gif"
+            src="/gifs/globe.gif"
             style={{ width: "5rem", height: "5rem" }}
             alt=""
           />

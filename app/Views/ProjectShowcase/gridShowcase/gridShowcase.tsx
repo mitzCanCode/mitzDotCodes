@@ -23,7 +23,7 @@ export function GridShowcase({
     <OldTVFrame>
       <>
         <Link className="desktop-home" to="/main" aria-label="Return to home">
-          <img src="/globe.gif" alt="" />
+          <img src="/gifs/globe.gif" alt="" />
         </Link>
         <main className="projects-grid fade-in" aria-label="Website projects">
           <header className="project-header">
