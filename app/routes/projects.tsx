@@ -98,85 +98,91 @@ export default function ProjectsRoute() {
 
   const apps: ShowcaseProject[] = [
     {
-      name: "Sololift",
+      name: "SoloLift",
       description:
-        "A website for the Sololift project, a project that allows you to create and share your own music.",
+        "A workout tracker app for powerlifting and bodybuilding, with a focus on simplicity and ease of use.",
       hex: "#DC143C",
       underDevelopment: false,
-      location: "https://sololift.app"
+      location: "https://sololift.app",
+      demo: { type: "gallery", imagePath: "public/showcases/mobile/sololift.png" },
     },
     {
       name: "DevPoint",
       description:
-        "A website for the DevPoint project, a project that allows you to create and share your own music.",
+        "An app for developers, to view the status of their deployments, as well as a suite of tools to simplify the development process.",
       hex: "#BF5AF2",
       underDevelopment: false,
       location: "https://devpoint.mitz.codes",
+      demo: { type: "gallery", imagePath: "public/showcases/mobile/devpoint.png" },
     },
-    {
-      name: "HotPotatoes",
-      description:
-        "A website for the HotPotatoes project, a project that allows you to create and share your own music.",
-      hex: "cyan",
-      underDevelopment: true,
-      location: null,
-    },
+    // {
+    //   name: "HotPotatoes",
+    //   description:
+    //     "A website for the HotPotatoes project, a project that allows you to create and share your own music.",
+    //   hex: "cyan",
+    //   underDevelopment: true,
+    //   location: null,
+    // },
   ];
 
   const cli: ShowcaseProject[] = [
     {
-      name: "Netscan",
+      name: "Netscan.py",
       description: "A CLI tool for scanning networks.",
       hex: "red",
       underDevelopment: false,
       location: "https://mitzcancode.github.io/netscan",
-      language: "python",
-      demo: { type: "video", videoPath: "/showcases/cli/netscan.mov" },
+      demo: { type: "gallery", imagePath: "public/showcases/cli/netscan.png" },
     },
     {
-      name: "OhShint",
-      description: "A CLI tool for osint investigations.",
+      name: "OhShint.py",
+      description: "A CLI tool for OSINT investigations.",
       hex: "cyan",
       underDevelopment: false,
       location: "https://mitzcancode.github.io/OhShint/",
-      language: "python",
-      demo: { type: "video", videoPath: "/showcases/cli/ohshint.mp4" },
+      demo: { type: "gallery", imagePath: "public/showcases/cli/ohshint.png" },
     },
     {
       name: "tetris.c",
-      description: "A CLI tool for playing Tetris.",
+      description: "A CLI version of Tetris.",
       hex: "purple",
       underDevelopment: false,
       location: "https://github.com/mitzCanCode/Tetris",
       language: "c",
-      demo: { type: "video", videoPath: "/showcases/cli/tetris-c.mp4" },
+      demo: { type: "gallery", imagePath: "public/showcases/cli/tetris.png" },
     },
+  
     {
       name: "pacman.cpp",
-      description: "A CLI tool for playing Pacman.",
+      description: "A CLI version of Pacman.",
       hex: "yellow",
       underDevelopment: false,
       location: "https://github.com/mitzCanCode/Pacman",
       language: "c++",
-      demo: { type: "video", videoPath: "/showcases/cli/pacman-cpp.mp4" },
+      demo: { type: "gallery", imagePath: "public/showcases/cli/pacman.png" },
     },
   ];
 
-  const websitesView = isMobile ? (
-    <VerticalShowcase projects={websites} title="WEBSITES" />
-  ) : (
-    <GridShowcase projects={websites} title="WEBSITES" />
-  );
+  const renderShowcase = (projects: ShowcaseProject[], title: string) => {
+    return isMobile ? (
+      <VerticalShowcase projects={projects} title={title} />
+    ) : (
+      <GridShowcase projects={projects} title={title} />
+    );
+  };
 
   switch (category) {
     case "websites":
     case "web":
-      return websitesView;
+      return renderShowcase(websites, "WEBSITES");
+
     case "mobile":
-      return <VerticalShowcase projects={apps} title="MOBILE" />;
+      return renderShowcase(apps, "MOBILE");
+
     case "cli":
-      return <VerticalShowcase projects={cli} title="CLI" />;
+      return renderShowcase(cli, "CLI");
+
     default:
-      return websitesView;
+      return renderShowcase(websites, "WEBSITES");
   }
 }
