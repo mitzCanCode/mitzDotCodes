@@ -45,7 +45,7 @@ export default function ProjectsRoute() {
       hex: "purple",
       underDevelopment: false,
       location: "https://scriptee.app",
-      demo: { type: "gallery", imagePath: "public/showcases/www/scriptee.png" },
+      demo: { type: "gallery", imagePath: "/showcases/www/scriptee.png" },
     },
     {
       name: "NCK Active",
@@ -53,7 +53,7 @@ export default function ProjectsRoute() {
       hex: "cyan",
       underDevelopment: false,
       location: "https://nckactive.com",
-      demo: { type: "gallery", imagePath: "public/showcases/www/nckactive.png" },
+      demo: { type: "gallery", imagePath: "/showcases/www/nckactive.png" },
     },
     {
       name: "Sidestage",
@@ -61,7 +61,7 @@ export default function ProjectsRoute() {
       hex: "gold",
       underDevelopment: false,
       location: "https://sidestage.eu",
-      demo: { type: "gallery", imagePath: "public/showcases/www/sidestage.png" },
+      demo: { type: "gallery", imagePath: "/showcases/www/sidestage.png" },
     },
     {
       name: "Adelvassi",
@@ -69,7 +69,7 @@ export default function ProjectsRoute() {
       hex: "orange",
       underDevelopment: false,
       location: "https://adelvassi.gr",
-      demo: { type: "gallery", imagePath: "public/showcases/www/adelvassi.png" },
+      demo: { type: "gallery", imagePath: "/showcases/www/adelvassi.png" },
     },
     {
       name: "Tetris.js",
@@ -77,7 +77,7 @@ export default function ProjectsRoute() {
       hex: "lime",
       underDevelopment: false,
       location: "https://tetris.mitz.codes",
-      demo: { type: "gallery", imagePath: "public/showcases/www/tetris-js.png" },
+      demo: { type: "gallery", imagePath: "/showcases/www/tetris-js.png" },
     },
 
     {
@@ -86,7 +86,7 @@ export default function ProjectsRoute() {
       hex: "white",
       underDevelopment: false,
       location: "https://ifigeneiakarani.gr/",
-      demo: { type: "gallery", imagePath: "public/showcases/www/researcher-portfolio.png" },
+      demo: { type: "gallery", imagePath: "/showcases/www/researcher-portfolio.png" },
     },
   ];
 
@@ -98,7 +98,7 @@ export default function ProjectsRoute() {
       hex: "#DC143C",
       underDevelopment: false,
       location: "https://sololift.app",
-      demo: { type: "gallery", imagePath: "public/showcases/mobile/sololift.png" },
+      demo: { type: "gallery", imagePath: "/showcases/mobile/sololift.png" },
     },
     {
       name: "DevPoint",
@@ -107,7 +107,7 @@ export default function ProjectsRoute() {
       hex: "#BF5AF2",
       underDevelopment: false,
       location: "https://devpoint.mitz.codes",
-      demo: { type: "gallery", imagePath: "public/showcases/mobile/devpoint.png" },
+      demo: { type: "gallery", imagePath: "/showcases/mobile/devpoint.png" },
     },
     // {
     //   name: "HotPotatoes",
@@ -126,7 +126,7 @@ export default function ProjectsRoute() {
       hex: "red",
       underDevelopment: false,
       location: "https://mitzcancode.github.io/netscan",
-      demo: { type: "gallery", imagePath: "public/showcases/cli/netscan.png" },
+      demo: { type: "gallery", imagePath: "/showcases/cli/netscan.png" },
     },
     {
       name: "OhShint.py",
@@ -134,7 +134,7 @@ export default function ProjectsRoute() {
       hex: "cyan",
       underDevelopment: false,
       location: "https://mitzcancode.github.io/OhShint/",
-      demo: { type: "gallery", imagePath: "public/showcases/cli/ohshint.png" },
+      demo: { type: "gallery", imagePath: "/showcases/cli/ohshint.png" },
     },
     {
       name: "tetris.c",
@@ -143,7 +143,7 @@ export default function ProjectsRoute() {
       underDevelopment: false,
       location: "https://github.com/mitzCanCode/Tetris",
       language: "c",
-      demo: { type: "gallery", imagePath: "public/showcases/cli/tetris.png" },
+      demo: { type: "gallery", imagePath: "/showcases/cli/tetris.png" },
     },
   
     {
@@ -153,7 +153,7 @@ export default function ProjectsRoute() {
       underDevelopment: false,
       location: "https://github.com/mitzCanCode/Pacman",
       language: "c++",
-      demo: { type: "gallery", imagePath: "public/showcases/cli/pacman.png" },
+      demo: { type: "gallery", imagePath: "/showcases/cli/pacman.png" },
     },
   ];
 
